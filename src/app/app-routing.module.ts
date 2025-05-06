@@ -12,6 +12,8 @@ import { AboutComponent } from './about/about.component';
 import { WhatweofferComponent } from './whatweoffer/whatweoffer.component';
 import { FaqComponent } from './faq/faq.component';
 import { ContactComponent } from './contact/contact.component';
+import { ProcesstoapplyComponent } from './processtoapply/processtoapply.component';
+import { EmiComponent } from './emi/emi.component';
 
 const routes: Routes = [
   {
@@ -25,7 +27,13 @@ const routes: Routes = [
     path:'wwo', component:WhatweofferComponent
   },
   {
+    path:'enquiry', component:ProcesstoapplyComponent
+  },
+  {
     path:'faq', component:FaqComponent
+  },
+  {
+    path:'emi', component:EmiComponent
   },
   {
     path:'contact', component:ContactComponent

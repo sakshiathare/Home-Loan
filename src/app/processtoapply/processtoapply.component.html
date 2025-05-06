@@ -1,0 +1,150 @@
+<div class="wrapper">
+    <!-- Top Navigation -->
+    <div class="top_nav">
+      <div class="left">
+        <div class="logo">
+          <p><span>SanyuInfotech</span>Home Loan</p>
+        </div>
+      </div>
+      
+      <div class="right1">
+        <ul>
+          <li>
+            <a href="mailto:hr@sanyuinfotech.com">Email US</a>
+            <p>hr@sanyuinfotech.com</p>
+          </li>
+          <li>
+            <a href="tel:+919870000010">Call Us</a>
+            <p>+91 9870000010</p>
+          </li>
+        </ul>
+      </div>
+      
+      <div>
+        <button routerLink="/login" class="btn">Login</button>
+      </div>
+    </div>
+    
+    <!-- Main Navigation -->
+    <div class="manual">
+      <div class="nav" data-spy="affix" data-offset-top="197">
+        <div class="menu-btn">
+          <i class="fas fa-bars"></i>
+        </div>
+        <ul>
+          <li ><a href="#">Home</a></li>
+          <li><a routerLink="/about">About us</a></li>
+          <li><a routerLink="/wwo">What we Offer</a></li>
+          <li class="active"><a routerLink="/enquiry">Process to Apply</a></li>
+          <li><a routerLink="/emi">Loan EMI Calculator</a></li>
+          <li><a routerLink="/faq">FAQs</a></li>
+          <li><a routerLink="/contact">Contact Us</a></li>
+        </ul>
+      </div>
+      
+      <router-outlet></router-outlet>
+      
+      
+  <!-- Process To Apply section -->
+
+
+  <div class="process-container">
+    <div class="process-header">
+      <h1>Simple Steps to Your Dream Home</h1>
+      <p>Our streamlined application process makes getting a home loan quick and hassle-free</p>
+    </div>
+  
+    <div class="process-steps">
+      <!-- Step 1 -->
+      <div class="step-card">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h3>Check Eligibility</h3>
+          <p>Use our online eligibility calculator to see how much you can borrow based on your income, expenses, and credit score.</p>
+          <button class="step-button" routerLink="/enquiry">Check Now</button>
+        </div>
+      </div>
+  
+      <!-- Step 2 -->
+      <div class="step-card">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h3>Submit Application</h3>
+          <p>Fill our simple online application form with your personal, financial, and property details. It takes less than 10 minutes.</p>
+        </div>
+      </div>
+  
+      <!-- Step 3 -->
+      <div class="step-card">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h3>Document Submission</h3>
+          <p>Upload required documents including ID proof, address proof, income documents, and property papers through our secure portal.</p>
+          <div class="documents-list">
+            <h4>Documents Needed:</h4>
+            <ul>
+              <li><i class="fas fa-file-alt"></i> KYC Documents (PAN, Aadhaar)</li>
+              <li><i class="fas fa-file-invoice-dollar"></i> Last 3 months salary slips</li>
+              <li><i class="fas fa-file-contract"></i> Property documents</li>
+              <li><i class="fas fa-bank"></i> Bank statements (6 months)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Step 4 -->
+      <div class="step-card">
+        <div class="step-number">4</div>
+        <div class="step-content">
+          <h3>Verification & Approval</h3>
+          <p>Our team will verify your details and documents. You'll receive an in-principle approval within 48 hours of document submission.</p>
+        </div>
+      </div>
+  
+      <!-- Step 5 -->
+      <div class="step-card">
+        <div class="step-number">5</div>
+        <div class="step-content">
+          <h3>Loan Disbursement</h3>
+          <p>After property valuation and final approval, funds will be disbursed directly to the builder/seller's account as per agreement.</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="process-features">
+      <h2>Why Choose SanyuInfotech Home Loans?</h2>
+      <div class="features-grid">
+        <div class="feature-item">
+          <i class="fas fa-percentage"></i>
+          <h4>Competitive Rates</h4>
+          <p>Starting from 8.40% p.a. with flexible tenure options up to 30 years</p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-rupee-sign"></i>
+          <h4>High Loan Amount</h4>
+          <p>Get up to 90% of property value with loans up to ₹10 crores</p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-bolt"></i>
+          <h4>Quick Processing</h4>
+          <p>Sanction in 72 hours* with minimal documentation</p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-user-shield"></i>
+          <h4>Transparent Process</h4>
+          <p>No hidden charges with complete fee structure disclosed upfront</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="cta-section">
+      <h3>Ready to Begin Your Home Loan Journey?</h3>
+      <p>Our loan experts are available to guide you at every step</p>
+      <div class="cta-buttons">
+        <button class="primary-btn" routerLink="/enquiry">Apply Now</button>
+        <button class="secondary-btn" routerLink="/contact">Talk to Expert</button>
+      </div>
+    </div>
+  </div>
+  
+  <app-footer></app-footer>

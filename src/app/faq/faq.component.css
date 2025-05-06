@@ -1,6 +1,9 @@
+/* nav section */
 
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
 
+/* Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -8,196 +11,355 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* Wrapper - Home Top Section */
-.wrapper .top_nav {
-  margin-top: 2px;
+/* Header/Navigation Styles */
+.affix {
+  top: 0;
   width: 100%;
-  height: 15%;
+  z-index: 9999 !important;
+}
+
+.affix + .container-fluid {
+  padding-top: 70px;
+}
+
+.wrapper {
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.top_nav {
   background: #fff;
-  padding: 0px 10;
+  padding: 15px 5%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid #eaeaea;
 }
 
-.wrapper .top_nav .left {
+.left {
   display: flex;
   align-items: center;
-  margin-left: 7%;
 }
 
-.wrapper .top_nav .left .logo p {
-  font-size: 28px;
-  font-weight: bold;
+.logo p {
+  font-size: 24px;
+  font-weight: 700;
   color: navy;
-  font-family: sans-serif;
+  margin-right: 15px;
   font-style: oblique;
-  margin-right: 7%;
-  padding-bottom: 2%;
-  width: max-content;
 }
 
-.wrapper .top_nav .left .logo p span {
+.logo p span {
   color: rgb(243, 222, 36);
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 40px;
-  padding-bottom: 4%;
+  font-family: Georgia, serif;
+  font-size: 28px;
   font-style: italic;
 }
 
-.wrapper .top_nav .right1 ul {
-  display: inline-flex;
-  float: right;
-  margin-top: 4%;
-  padding-bottom: 2%;
+.right1 ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
-.wrapper .top_nav .right1 ul li {
-  float: right;
-  padding-right: 20px;
-  padding-bottom: 2%;
+.right1 ul li {
+  list-style: none;
+  position: relative;
 }
 
-.wrapper .top_nav .right1 ul li p {
-  text-transform: lowercase;
-  padding-left: 10px;
+.right1 ul li a {
+  color: #333;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-.wrapper .top_nav .right1 ul li p:hover {
-  padding-top: 1%;
+.right1 ul li p {
+  color: #555;
+  font-size: 13px;
+  margin-top: 5px;
+  transition: all 0.3s ease;
+}
+
+.right1 ul li:hover p {
   color: darkcyan;
 }
 
-.wrapper .top_nav .right1 ul li a {
-  display: block;
-  padding: 5px 8px;
-  color: black;
-  font-size: 15px;
+.btn {
+  background: rgb(82, 235, 255);
+  color: #001846;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.wrapper .top_nav .right1 ul li:last-child a {
-  color: black;
+.btn:hover {
+  background: rgb(72, 225, 245);
+  transform: translateY(-2px);
 }
 
+/* Main Navigation */
 .nav {
-  display: flex;
-  height: 60px;
-  width: 100%;
   background: #001846;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0;
-  flex-wrap: nowrap;
+  padding: 0 5%;
 }
 
 .nav ul {
   display: flex;
-  flex-wrap: wrap;
   list-style: none;
-  height: 60px;
 }
 
 .nav ul li {
-  height: 100%;
-  padding: 18px 26px;
+  padding: 20px 25px;
+  position: relative;
 }
 
 .nav ul li a {
   color: #f2f2f2;
   text-decoration: none;
-  font-size: 20px;
-  font-weight: 400;
-  letter-spacing: 1px;
+  font-size: 16px;
+  font-weight: 500;
   transition: all 0.3s ease;
 }
 
-.nav ul li.active,
-.nav ul li a:hover {
-  color: #111;
+.nav ul li:hover,
+.nav ul li.active {
   background: rgb(82, 235, 255);
 }
 
-.nav .menu-btn i {
-  color: #fff;
-  font-size: 22px;
+.nav ul li:hover a {
+  color: #111;
+}
+
+/* FAQ */
+.faq-container {
+  padding: 60px 8%;
+  background-color: #f9f9f9;
+}
+
+.faq-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.faq-header h1 {
+  font-size: 2.5rem;
+  color: #001846;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.faq-header p {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.faq-content {
+  display: flex;
+  gap: 40px;
+}
+
+.faq-categories {
+  flex: 0 0 250px;
+}
+
+.faq-categories h3 {
+  color: #001846;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.category-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.category-btn {
+  padding: 12px 20px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: left;
+  font-weight: 500;
+  color: #333;
   cursor: pointer;
-  display: none;
+  transition: all 0.3s ease;
 }
 
-input[type="checkbox"] {
-  display: none;
+.category-btn:hover {
+  border-color: rgb(82, 235, 255);
+  color: #001846;
 }
 
-/* Mobile Nav */
-@media (max-width: 1140px) {
-  nav .menu-btn i {
-    display: block;
-  }
-  #click:checked ~ ul {
-    left: 0;
-  }
-  nav ul {
-    position: fixed;
-    top: 280px;
-    left: -100%;
-    background: rgba(0, 0, 0, 0.945);
-    height: 40%;
-    width: 100%;
-    text-align: center;
-    display: block;
-    transition: all 0.3s ease;
-  }
-  nav ul li {
-    width: 100%;
-    margin: 1px 0;
-  }
-  nav ul li a {
-    width: 100%;
-    display: block;
-    font-size: 20px;
-    margin-left: -100%;
-    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  }
-  #click:checked ~ ul li a {
-    margin-left: 0px;
-  }
-  nav ul li a:hover {
-    background: none;
-    color: cyan;
-  }
+.category-btn.active {
+  background: rgb(82, 235, 255);
+  border-color: rgb(82, 235, 255);
+  color: #001846;
+  font-weight: 600;
 }
 
+.faq-accordion {
+  flex: 1;
+}
 
+.faq-item {
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
 
+.faq-question {
+  width: 100%;
+  padding: 20px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #001846;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 
+.faq-question:hover {
+  background: #f5f9ff;
+}
 
-.faq-section {
-    max-width: 900px;
-    margin: auto;
-    padding: 40px 20px;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f9f9f9;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+.faq-question i {
+  transition: transform 0.3s ease;
+}
+
+.faq-question.active i {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 25px;
+}
+
+.faq-answer.show {
+  max-height: 1000px;
+  padding: 0 25px 25px;
+}
+
+.faq-answer p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.faq-answer ul {
+  margin: 15px 0;
+  padding-left: 20px;
+}
+
+.faq-answer li {
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.document-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.document-columns h4 {
+  color: #001846;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.faq-support {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.support-card {
+  background: #001846;
+  color: white;
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.support-card i {
+  font-size: 2.5rem;
+  color: rgb(82, 235, 255);
+  margin-bottom: 20px;
+}
+
+.support-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.support-card p {
+  opacity: 0.9;
+  margin-bottom: 25px;
+}
+
+.support-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.support-link {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.support-link:hover {
+  color: rgb(82, 235, 255);
+}
+
+.support-link i {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .faq-container {
+    padding: 40px 5%;
   }
   
-  .faq-section h2 {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #2c3e50;
+  .faq-content {
+    flex-direction: column;
   }
   
-  .faq {
-    margin-bottom: 25px;
+  .faq-categories {
+    flex: 1;
   }
   
-  .faq h4 {
-    color: #34495e;
-    margin-bottom: 8px;
+  .category-buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
   
-  .faq p {
-    color: #555;
-    line-height: 1.6;
+  .document-columns {
+    grid-template-columns: 1fr;
   }
-  
+}

@@ -445,77 +445,7 @@
 
 
 
-/* Footer Styles */
-.footer {
-  background: #001846;
-  color: #fff;
-  padding: 50px 5% 30px;
-}
 
-.footer-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.footer-left h3 {
-  font-size: 24px;
-  margin-bottom: 15px;
-  color: rgb(243, 222, 36);
-}
-
-.footer-left h3 span {
-  color: rgb(82, 235, 255);
-}
-
-.footer-left p {
-  color: #ccc;
-  line-height: 1.6;
-}
-
-.footer-middle h4,
-.footer-right h4 {
-  font-size: 18px;
-  margin-bottom: 20px;
-  color: rgb(82, 235, 255);
-}
-
-.footer-middle ul {
-  list-style: none;
-}
-
-.footer-middle ul li {
-  margin-bottom: 10px;
-}
-
-.footer-middle ul li a {
-  color: #ccc;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.footer-middle ul li a:hover {
-  color: rgb(82, 235, 255);
-}
-
-.footer-right p {
-  color: #ccc;
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.footer-bottom {
-  text-align: center;
-  margin-top: 40px;
-  padding-top: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  color: #aaa;
-  font-size: 14px;
-}
 
 /* Responsive Design */
 @media (max-width: 992px) {

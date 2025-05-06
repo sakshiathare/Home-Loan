@@ -11,6 +11,8 @@ import { WhatweofferComponent } from './whatweoffer/whatweoffer.component';
 import { FaqComponent } from './faq/faq.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
+import { ProcesstoapplyComponent } from './processtoapply/processtoapply.component';
+import { EmiComponent } from './emi/emi.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { FooterComponent } from './footer/footer.component';
     FaqComponent,
     ContactComponent,
     FooterComponent,
+    ProcesstoapplyComponent,
+    EmiComponent,
   ],
   imports: [
     BrowserModule,

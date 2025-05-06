@@ -1,0 +1,191 @@
+<div class="wrapper">
+    <!-- Top Navigation -->
+    <div class="top_nav">
+      <div class="left">
+        <div class="logo">
+          <p><span>SanyuInfotech</span>Home Loan</p>
+        </div>
+      </div>
+      
+      <div class="right1">
+        <ul>
+          <li>
+            <a href="mailto:hr@sanyuinfotech.com">Email US</a>
+            <p>hr@sanyuinfotech.com</p>
+          </li>
+          <li>
+            <a href="tel:+919870000010">Call Us</a>
+            <p>+91 9870000010</p>
+          </li>
+        </ul>
+      </div>
+      
+      <div>
+        <button routerLink="/login" class="btn">Login</button>
+      </div>
+    </div>
+    
+    <!-- Main Navigation -->
+    <div class="manual">
+      <div class="nav" data-spy="affix" data-offset-top="197">
+        <div class="menu-btn">
+          <i class="fas fa-bars"></i>
+        </div>
+        <ul>
+          <li ><a href="#">Home</a></li>
+          <li><a routerLink="/about">About us</a></li>
+          <li><a routerLink="/wwo">What we Offer</a></li>
+          <li ><a routerLink="/enquiry">Process to Apply</a></li>
+          <li class="active"><a routerLink="/emi">Loan EMI Calculator</a></li>
+          <li><a routerLink="/faq">FAQs</a></li>
+          <li><a routerLink="/contact">Contact Us</a></li>
+        </ul>
+      </div>
+      
+      <router-outlet></router-outlet>
+
+
+      <!-- EMI -->
+      <div class="emi-calculator-container">
+        <div class="calculator-header">
+          <h1>Home Loan EMI Calculator</h1>
+          <p>Plan your home loan repayments with our easy-to-use EMI calculator</p>
+        </div>
+      
+        <div class="calculator-wrapper">
+          <div class="calculator-form">
+            <div class="form-group">
+              <label for="loanAmount">Loan Amount (₹)</label>
+              <div class="input-group">
+                <input type="range" id="loanAmount" min="500000" max="50000000" step="100000" value="3000000">
+                <span class="value-display" id="loanAmountValue">30,00,000</span>
+              </div>
+            </div>
+      
+            <div class="form-group">
+              <label for="interestRate">Interest Rate (% p.a.)</label>
+              <div class="input-group">
+                <input type="range" id="interestRate" min="6.5" max="15" step="0.1" value="8.4">
+                <span class="value-display" id="interestRateValue">8.4</span>
+              </div>
+            </div>
+      
+            <div class="form-group">
+              <label for="loanTenure">Loan Tenure (years)</label>
+              <div class="input-group">
+                <input type="range" id="loanTenure" min="5" max="30" step="1" value="20">
+                <span class="value-display" id="loanTenureValue">20</span>
+              </div>
+            </div>
+      
+            <button class="calculate-btn" id="calculateBtn">Calculate EMI</button>
+          </div>
+      
+          <div class="calculator-results">
+            <div class="result-card">
+              <div class="result-icon">
+                <i class="fas fa-rupee-sign"></i>
+              </div>
+              <div class="result-content">
+                <h4>Monthly EMI</h4>
+                <p class="result-value" id="emiAmount">₹25,845</p>
+              </div>
+            </div>
+      
+            <div class="result-card">
+              <div class="result-icon">
+                <i class="fas fa-hand-holding-usd"></i>
+              </div>
+              <div class="result-content">
+                <h4>Total Interest</h4>
+                <p class="result-value" id="totalInterest">₹32,02,800</p>
+              </div>
+            </div>
+      
+            <div class="result-card">
+              <div class="result-icon">
+                <i class="fas fa-money-bill-wave"></i>
+              </div>
+              <div class="result-content">
+                <h4>Total Payment</h4>
+                <p class="result-value" id="totalPayment">₹62,02,800</p>
+                <p class="result-note">(Principal + Interest)</p>
+              </div>
+            </div>
+      
+            <div class="result-table">
+              <h4>Amortization Schedule</h4>
+              <div class="table-responsive">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Year</th>
+                      <th>Principal (₹)</th>
+                      <th>Interest (₹)</th>
+                      <th>Balance (₹)</th>
+                    </tr>
+                  </thead>
+                  <tbody id="amortizationTable">
+                    <!-- Will be populated by JavaScript -->
+                    <tr>
+                      <td>1</td>
+                      <td>1,45,200</td>
+                      <td>2,65,140</td>
+                      <td>28,54,800</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>1,57,800</td>
+                      <td>2,52,540</td>
+                      <td>26,97,000</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>1,71,600</td>
+                      <td>2,38,740</td>
+                      <td>25,25,400</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <button class="view-all-btn">View Complete Schedule</button>
+            </div>
+          </div>
+        </div>
+      
+        <div class="calculator-features">
+          <h2>Benefits of Using Our Home Loan</h2>
+          <div class="features-grid">
+            <div class="feature-card">
+              <i class="fas fa-percentage"></i>
+              <h4>Low Interest Rates</h4>
+              <p>Starting from 8.40% with special rates for women borrowers</p>
+            </div>
+            <div class="feature-card">
+              <i class="fas fa-clock"></i>
+              <h4>Quick Processing</h4>
+              <p>Get approval within 72 hours with minimal documentation</p>
+            </div>
+            <div class="feature-card">
+              <i class="fas fa-balance-scale"></i>
+              <h4>Flexible Tenure</h4>
+              <p>Repayment options from 5 to 30 years based on your convenience</p>
+            </div>
+            <div class="feature-card">
+              <i class="fas fa-piggy-bank"></i>
+              <h4>Tax Benefits</h4>
+              <p>Save up to ₹1.5 lakh annually under Section 24 and 80C</p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="calculator-cta">
+          <h3>Ready to Apply for Your Home Loan?</h3>
+          <p>Get instant approval with our quick online application process</p>
+          <div class="cta-buttons">
+            <button class="primary-btn" routerLink="/enquiry">Apply Now</button>
+            <button class="secondary-btn" routerLink="/contact">Talk to Loan Expert</button>
+          </div>
+        </div>
+      </div>
+      <app-footer></app-footer>

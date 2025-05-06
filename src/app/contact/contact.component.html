@@ -1,66 +1,176 @@
 
 
-<!-- Home Section -->
-<div class="wrapper"> 
-    <div class="top_nav">
-      <div class="left">
-        <div class="logo"><p><span>SanyuInfotech</span>Home Loan</p></div>
-      </div> 
-      <div class="right1">
-        <ul>
-          <li><a href="#"><span style="font-weight: bold; font-size: 20px;">EMAIL US</span><br><p>hr@sanyuinfotech.com</p></a></li>
-          <li><a href="#"><span style="font-weight: bold; font-size: 20px;">CALL US</span><br><p>+91 9870000010</p></a></li>
-        </ul>
-      </div>
-      <div>
-        <button routerLink="/login" class="btn" style="height: 40px; width: 80px; background-color:aqua; margin-right: 30px;">Login</button>
+
+
+
+<div class="wrapper">
+  <!-- Top Navigation -->
+  <div class="top_nav">
+    <div class="left">
+      <div class="logo">
+        <p><span>SanyuInfotech</span>Home Loan</p>
       </div>
     </div>
+    
+    <div class="right1">
+      <ul>
+        <li>
+          <a href="mailto:hr@sanyuinfotech.com">Email US</a>
+          <p>hr@sanyuinfotech.com</p>
+        </li>
+        <li>
+          <a href="tel:+919870000010">Call Us</a>
+          <p>+91 9870000010</p>
+        </li>
+      </ul>
+    </div>
+    
+    <div>
+      <button routerLink="/login" class="btn">Login</button>
+    </div>
+  </div>
   
-
-    <div class="manual">
-      <div class="nav" data-spy="affix" data-offset-top="197">
-        <nav>
-          <input type="checkbox" id="click">
-          <ul>
-            <li><a routerLink="/home">Home</a></li>
-            <li><a routerLink="/about">About us</a></li>
-            <li ><a routerLink="/wow">What we Offer</a></li>
-            <li><a routerLink="/enquiry">Process to Apply</a></li>
-            <li><a href="#">Loan EMI Calculator</a></li>
-            <li><a href="#" routerLink="/faq">FAQs</a></li>
-            <li class="active"><a href="#" routerLink="/contact">Contact Us</a></li>
-          </ul>
-        </nav>
+  <!-- Main Navigation -->
+  <div class="manual">
+    <div class="nav" data-spy="affix" data-offset-top="197">
+      <div class="menu-btn">
+        <i class="fas fa-bars"></i>
       </div>
+      <ul>
+        <li ><a href="#">Home</a></li>
+        <li ><a routerLink="/about">About us</a></li>
+        <li><a routerLink="/wwo">What we Offer</a></li>
+        <li><a routerLink="/enquiry">Process to Apply</a></li>
+        <li><a routerLink="/emi">Loan EMI Calculator</a></li>
+        <li ><a routerLink="/faq">FAQs</a></li>
+        <li class="active"><a routerLink="/contact">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <router-outlet></router-outlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- contact -->
+
+
+<div class="contact-container">
+  <div class="contact-header">
+    <h1>Contact Our Home Loan Experts</h1>
+    <p>We're here to help you with all your home financing needs</p>
+  </div>
+
+  <div class="contact-wrapper">
+    <div class="contact-info">
+      <div class="info-card">
+        <div class="info-icon">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <div class="info-content">
+          <h3>Our Office</h3>
+          <p>Sanyu Infotech Pvt. Ltd.<br>
+          123 Financial District,<br>
+          Bangalore - 560001, Karnataka</p>
+          <a href="#" class="map-link">View on Map <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon">
+          <i class="fas fa-phone-alt"></i>
+        </div>
+        <div class="info-content">
+          <h3>Call Us</h3>
+          <p>Customer Care: <a href="tel:+918041234567">+91 80 4123 4567</a></p>
+          <p>Loan Specialist: <a href="tel:+919876543210">+91 98765 43210</a></p>
+          <p>Monday to Saturday, 9 AM to 7 PM</p>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <div class="info-content">
+          <h3>Email Us</h3>
+          <p>General Enquiries: <a href="mailto:info@sanyuinfotech.com">info@sanyuinfotech.com</a></p>
+          <p>Loan Support: <a href="mailto:loans@sanyuinfotech.com">loans@sanyuinfotech.com</a></p>
+          <p>We typically respond within 2 business hours</p>
+        </div>
+      </div>
+
+      <div class="social-media">
+        <h3>Connect With Us</h3>
+        <div class="social-icons">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <h2>Send Us a Message</h2>
+      <form>
+        <div class="form-group">
+          <label for="name">Full Name*</label>
+          <input type="text" id="name" placeholder="Enter your full name" required>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email Address*</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number*</label>
+            <input type="tel" id="phone" placeholder="Enter your phone number" required>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="subject">Subject*</label>
+          <select id="subject" required>
+            <option value="">Select a subject</option>
+            <option value="new-loan">New Home Loan Enquiry</option>
+            <option value="existing-loan">Existing Loan Query</option>
+            <option value="documentation">Documentation Help</option>
+            <option value="interest-rates">Interest Rates Enquiry</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Your Message*</label>
+          <textarea id="message" rows="5" placeholder="Type your message here..." required></textarea>
+        </div>
+        
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
     </div>
   </div>
 
-<div class="contact-section">
-    <h2>Contact Us</h2>
-  
-    <form class="contact-form">
-      <div class="form-group">
-        <label for="name">Full Name</label>
-        <input type="text" id="name" name="name" placeholder="Enter your full name" required />
-      </div>
-  
-      <div class="form-group">
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email address" required />
-      </div>
-  
-      <div class="form-group">
-        <label for="subject">Subject</label>
-        <input type="text" id="subject" name="subject" placeholder="Enter the subject" required />
-      </div>
-  
-      <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
-      </div>
-  
-      <button type="submit" class="submit-btn">Send Message</button>
-    </form>
+  <div class="contact-map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.004231621649!2d77.59441431482189!3d12.971962990856518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sFinancial%20District%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1624962688479!5m2!1sen!2sin" 
+            width="100%" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy"></iframe>
   </div>
-  
+</div>
+
+<app-footer></app-footer>
