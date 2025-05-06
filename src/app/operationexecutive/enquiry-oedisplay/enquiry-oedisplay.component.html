@@ -1,0 +1,36 @@
+<router-outlet></router-outlet>
+<br><br>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">DOB</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Mail ID</th>
+        <th scope="col">Mobile No</th>
+        <th scope="col">Pancard No</th>
+        <th scope="col">AdharCard</th>
+        <th scope="col">Generate Cibil</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let e of enquiryOEDisplay | paginate: { itemsPerPage: count, currentPage: page}">
+          <!--  | paginate: { itemsPerPage: count, currentPage: page} -->
+        <td>{{e.eid}}</td>
+        <td>{{e.name}}</td>
+        <td>{{e.dob}}</td>
+        <td>{{e.gender}}</td>
+        <td>{{e.email}}</td>
+        <td>{{e.mobileNo}}</td>
+        <td>{{e.panCardNo}}</td>
+        <td>{{e.adharCardNo}}</td>
+        <td><a class="btn btn-success" [routerLink]="['cibil-generated',e.eid]">Generate</a></td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- Pagination -->
+  <div>
+    <pagination-controls (pageChange)="page = $event"></pagination-controls>
+  </div> 
+

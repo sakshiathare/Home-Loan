@@ -1,0 +1,95 @@
+<br><br><br>
+<body> 
+<form [formGroup]="sanctionForm" (ngSubmit)="sanctionCall()" > 
+    <input type="text" formControlName="sanctionDate">
+    
+<p>Dear {{customer.name}},<br>
+Thank you for choosing<b> ABC Bank</b>Based on the application and information provided therein,we are pleased 
+to extend an offer to you for a loan as per the preliminary terms and conditions mentioned below: </p>
+ 
+<table class="table table-bordered">
+      <tr>
+        <td>Application No.:  </td>
+        <td>{{customer.customerid}}</td>
+        </tr>
+
+        <tr>
+            <td>Sanction Data:</td>
+            <td><input type="text" formControlName="sanctionDate"></td>
+      </tr>
+      <tr>
+        <td>Applicat Name.:</td>
+        <td>{{customer.name}}</td>
+  </tr>
+     
+      <tr>
+        <td>Mobile No:</td>
+        <td>{{customer.mobileNo}}</td>
+  </tr>   
+  </table>
+  
+
+  <table class="table table-bordered">
+<tr>
+    <td>Loan Type:</td>
+    <td>Home Loan</td>
+</tr>
+
+<tr>
+    <td>Loan Amount Sanctioned:</td>
+    <td>Rs85,35,000</td>
+</tr>
+
+<tr>
+    <td>Reference Interest Rate:</td>
+    <td>X% per annum(interest type: Floating rate of interest | Periodicity of interest Application:Monthly )</td>
+</tr>
+
+<tr>
+    <td>Floating Interest Rate:</td>
+    <td>Reference rate applicable at the time of disbursement -4.90% per annum </td>
+</tr>
+
+<tr>
+    <td>Loan Tenor(In years):</td>
+    <td>25 years</td>
+</tr>
+
+<tr>
+    <td>Total Processing Charges:</td>
+    <td>UP to 0.5% of the total loan amount</td>
+</tr>
+
+<tr>
+    <td>Origination Fee(Inclusive of GST): </td>
+    <td>4,500</td>
+</tr>
+
+<tr>
+    <td>Sanction Letter Validity:</td>
+    <td>180 days from the date of sanction</td>
+</tr>
+
+<tr>
+    <td>Amount of EMI(INR):</td>
+    <td>89,000</td>
+</tr>
+
+<tr>
+    <td>Property Address:</td>
+    <td>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+</tr>
+  </table>
+
+  <h4>Additional conditions to comply prior to loan disbursal:</h4>
+  <p>1. Repayment from ABC bank<br>
+     2. Legal vetting and search to be conducted<br>
+     3. NOC and offered collateral<br>
+     4. conformation from, official ID and copy of ID<br>
+      
+  </p>
+  <button class="btn btn-info">Submit Form</button>
+  <button class="btn btn-info">Mail Send</button>
+</form>
+</body>
+

@@ -1,0 +1,534 @@
+
+<section class="h-100 bg-dark">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col">
+          <div class="card card-registration my-4">
+
+              <div class="col-xl-12">
+                <div class="card-body p-md-5 text-black">
+                  <h3 class="mb-5 text-uppercase" style="color: blueviolet;">View All Details</h3>
+                  <!-- Basic information -->
+                  <h5 class="mb-5 text-uppercase" style="color: cornflowerblue">Basic Information</h5>
+                  <div class="row">
+                    <div class="col-md-3 mb-4">
+                      <div class="card">
+                        <label class="form-label" for="form3Example1m">Name</label>
+                        <p class="card-text" class="btn btn-info">{{customer.name}}</p>
+                      </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                      <div class="card">
+                        <label class="form-label" for="form3Example1n">Date Of Birth</label>
+                        <p class="card-text" class="btn btn-info">{{customer.dob}}</p>
+                      </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <label class="form-label" for="form3Example1m">Age</label>
+                            <p class="card-text" class="btn btn-info">{{customer.age}}</p>
+                        </div>
+                      </div>
+                      <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <label class="form-label" for="form3Example1m">Email</label>
+                            <p class="card-text" class="btn btn-info">{{customer.email}}</p>
+                        </div>
+                      </div>
+                  </div>
+            <div class="row">
+              <div class="col-md-3 mb-4">
+                <div class="card">
+                    <label class="form-label" for="form3Example1m">Gender</label>
+                    <p class="btn btn-info">{{customer.gender}}</p>
+                </div>
+              </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <label class="form-label" for="form3Example1m">Mobile No</label>
+                        <p class="btn btn-info">{{customer.mobileNo}}</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <label class="form-label" for="form3Example1m">Addition Mobile No</label>
+                        <p class="btn btn-info">{{customer.additionalMobileNo}}</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <label class="form-label" for="form3Example1m">Pancard No</label>
+                        <p class="btn btn-info">{{customer.panCardNo}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                  <div class="card">
+                    <label class="form-label" for="form3Example1m">Addhar Number</label>
+                    <p class="btn btn-info">{{customer.adharCardNo}}</p>
+                  </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                  <div class="card">
+                    <label class="form-label" for="form3Example1n">Ammount Paid For Home</label>
+                    <p class="btn btn-info">{{customer.amountPaidForHome}}</p>
+                  </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <label class="form-label" for="form3Example1m">Total Loan required</label>
+                        <p class="btn btn-info">{{customer.totalLoanRequired}}</p>
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <label class="form-label" for="form3Example1m">Education</label>
+                        <p class="btn btn-info">{{customer.educationInfo}}</p>
+                    </div>
+                  </div>
+              </div>
+
+              <!-- Dependant Information Start -->
+              <h5 class="mb-5 text-uppercase" style="color: cornflowerblue">Dependent Information</h5>
+            <div formGroupName="dependant">
+              <div class="row">
+                <div class="col-md-3 mb-4">
+                  <div class="card">
+                    <label class="form-label" for="form3Example1m">Father Name</label>
+                    <p class="btn btn-info">{{customer.dependant.fatherName}}</p>
+                  </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                  <div class="card">
+                    <label class="form-label" for="form3Example1n">Mother Name</label>
+                    <p class="btn btn-info">{{customer.dependant.motherName}}</p>
+                  </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <label class="form-label" for="form3Example1m">Total Family Member</label>
+                        <p class="btn btn-info">{{customer.dependant.noOfFamilyMember}}</p>
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <label class="form-label" for="form3Example1m">Number Of children</label>
+                        <p class="btn btn-info">{{customer.dependant.noOfChild}}</p>
+                    </div>
+                  </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 mb-4">
+                  <div class="card">
+                    <label class="form-label" for="form3Example1m">Marital Status</label>
+                    <p class="btn btn-info">{{customer.dependant.maritalStatus}}</p>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="card">
+                    <label class="form-label" for="form3Example1n">Dependent Member</label>
+                    <p class="btn btn-info">{{customer.dependant.dependentMember}}</p>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <label class="form-label" for="form3Example1m">Spouse Name</label>
+                        <p class="btn btn-info">{{customer.dependant.spouseName}}</p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+             <!-- Customer Address -->
+             <h5 class="mb-5 text-uppercase" style="color: cornflowerblue">Customer Address</h5>
+         
+            <h6 class="mb-5 text-uppercase" style="color:darkred">Permanat Address</h6>
+              <!-- permanent Address -->
+            
+              <div class="row">
+                <div class="col-md-3 mb-4">
+                  <div class="card">
+                    <label class="form-label" for="form3Example1m">House Number</label>
+                    <p class="btn btn-info">{{customer.customerAddress.permanentAddress.houseNo}}</p>
+                  </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                  <div class="card">
+                    <label class="form-label" for="form3Example1n">Street Name</label>
+                    <p class="btn btn-info">{{customer.customerAddress.permanentAddress.streetName}}</p>
+                  </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <label class="form-label" for="form3Example1m">Area Name</label>
+                        <p class="btn btn-info">{{customer.customerAddress.permanentAddress.areaname}}</p>
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <label class="form-label" for="form3Example1m">City Name</label>
+                        <p class="btn btn-info">{{customer.customerAddress.permanentAddress.cityname}}</p>
+                    </div>
+                  </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 mb-4">
+                  <div class="card">
+                    <label class="form-label" for="form3Example1m">District Name</label>
+                    <p class="btn btn-info">{{customer.customerAddress.permanentAddress.district}}</p>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="card">
+                    <label class="form-label" for="form3Example1n">State</label>
+                    <p class="btn btn-info">{{customer.customerAddress.permanentAddress.state}}</p>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <label class="form-label" for="form3Example1m">Pincode</label>
+                        <p class="btn btn-info">{{customer.customerAddress.permanentAddress.pincode}}</p>
+                    </div>
+                  </div>
+                </div>
+             
+                 <!-- Local Address -->
+                 
+                 <h6 class="mb-5 text-uppercase" style="color:darkred">Local Address</h6>
+        
+                <div class="row">
+                  <div class="col-md-3 mb-4">
+                    <div class="card">
+                      <label class="form-label" for="form3Example1m">House Number</label>
+                      <p class="btn btn-info">{{customer.customerAddress.localAddress.houseNo}}</p>
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-4">
+                    <div class="card">
+                      <label class="form-label" for="form3Example1n">Street Name</label>
+                      <p class="btn btn-info">{{customer.customerAddress.localAddress.streetName}}</p>
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-4">
+                      <div class="card">
+                          <label class="form-label" for="form3Example1m">Area Name</label>
+                          <p class="btn btn-info">{{customer.customerAddress.localAddress.areaname}}</p>
+                      </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                      <div class="card">
+                          <label class="form-label" for="form3Example1m">City Name</label>
+                          <p class="btn btn-info">{{customer.customerAddress.localAddress.cityname}}</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4 mb-4">
+                    <div class="card">
+                      <label class="form-label" for="form3Example1m">District Name</label>
+                      <p class="btn btn-info">{{customer.customerAddress.localAddress.district}}</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="card">
+                      <label class="form-label" for="form3Example1n">State</label>
+                      <p class="btn btn-info">{{customer.customerAddress.localAddress.state}}</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                      <div class="card">
+                          <label class="form-label" for="form3Example1m">Pincode</label>
+                          <p class="btn btn-info">{{customer.customerAddress.localAddress.pincode}}</p>
+                      </div>
+                    </div>
+                  </div>
+
+            <!-- Profession Information Start -->
+            <h5 class="mb-5 text-uppercase" style="color: cornflowerblue"> Profession Information </h5>       
+                <div class="row">
+                  <div class="col-md-4 mb-4">
+                    <div class="card">
+                      <label class="form-label" for="form3Example1m">Profession Type</label>
+                      <p class="btn btn-info">{{customer.profession.professionType}}</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="card">
+                      <label class="form-label" for="form3Example1n">Salary</label>
+                      <p class="btn btn-info">{{customer.profession.salary}}</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                      <div class="card">
+                          <label class="form-label" for="form3Example1m">Salary Type</label>
+                          <p class="btn btn-info">{{customer.profession.salaryType}}</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div class="card">
+                      <label class="form-label" for="form3Example1m">Working Period</label>
+                      <p class="btn btn-info">{{customer.profession.workingPeriod}}</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="card">
+                      <label class="form-label" for="form3Example1n">Designation</label>
+                      <p class="btn btn-info">{{customer.profession.designation}}</p>
+                    </div>
+                  </div>
+                </div>
+
+
+                        <!-- Previous Loan Information Start -->
+            <h5 class="mb-5 text-uppercase" style="color: cornflowerblue"> Previousloan Information </h5>       
+
+                <div class="row">
+                  <div class="col-md-4 mb-4">
+                    <div class="card">
+                      <label class="form-label" for="form3Example1m">Loanamount</label>
+                      <p class="btn btn-info">{{customer.previousloan.loanAmount}}</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="card">
+                      <label class="form-label" for="form3Example1n">Tenure</label>
+                      <p class="btn btn-info">{{customer.previousloan.tenure}}</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                      <div class="card">
+                          <label class="form-label" for="form3Example1m">Paid Amount</label>
+                          <p class="btn btn-info">{{customer.previousloan.paidAmount}}</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4 mb-4">
+                    <div class="card">
+                      <label class="form-label" for="form3Example1m">Remaining Amount</label>
+                      <p class="btn btn-info">{{customer.previousloan.remainingAmount}}</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="card">
+                      <label class="form-label" for="form3Example1n">Status</label>
+                      <p class="btn btn-info">{{customer.previousloan.status}}</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="card">
+                      <label class="form-label" for="form3Example1n">Remark</label>
+                      <p class="btn btn-info">{{customer.previousloan.remark}}</p>
+                    </div>
+                  </div>
+                </div>
+    
+                    <!-- Account Details Start -->
+            <h5 class="mb-5 text-uppercase" style="color: cornflowerblue"> Account Details </h5>       
+                <div class="row">
+                  <div class="col-md-4 mb-4">
+                    <div class="card">
+                      <label class="form-label" for="form3Example1m">Account type</label>
+                      <p class="btn btn-info">{{customer.accountDetails.accountype}}</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="card">
+                      <label class="form-label" for="form3Example1n">Account Balanace</label>
+                      <p class="btn btn-info">{{customer.accountDetails.accountBalance}}</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                      <div class="card">
+                          <label class="form-label" for="form3Example1m">Account Holder Name</label>
+                          <p class="btn btn-info">{{customer.accountDetails.accountHolderName}}</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div class="card">
+                      <label class="form-label" for="form3Example1m">Account Status</label>
+                      <p class="btn btn-info">{{customer.accountDetails.accountStatus}}</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="card">
+                      <label class="form-label" for="form3Example1n">Account Number</label>
+                      <p class="btn btn-info">{{customer.accountDetails.accountNo}}</p>
+                    </div>
+                  </div>
+                </div>
+            <!-- Propery information -->
+            <h5 class="mb-5 text-uppercase" style="color: cornflowerblue">ProperyInfo</h5>
+            <div class="row">
+              <div class="col-md-4 mb-4">
+                <div class="card">
+                  <label class="form-label" for="form3Example1m">Propery type</label>
+                  <p class="btn btn-info">{{customer.propertyInfo.propertytype}}</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="card">
+                  <label class="form-label" for="form3Example1n">Property Price</label>
+                  <p class="btn btn-info">{{customer.propertyInfo.propertyPrice}}</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                  <div class="card">
+                      <label class="form-label" for="form3Example1m">Construction Price</label>
+                      <p class="btn btn-info">{{customer.propertyInfo.constructionPrice}}</p>
+                  </div>
+                </div>
+
+                <div class="col-md-3 mb-4">
+                  <div class="card">
+                    <label class="form-label" for="form3Example1m">House Number</label>
+                    <p class="btn btn-info">{{customer.propertyInfo.localAddress.houseNo}}</p>
+                  </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                  <div class="card">
+                    <label class="form-label" for="form3Example1n">Street Name</label>
+                    <p class="btn btn-info">{{customer.propertyInfo.localAddress.streetName}}</p>
+                  </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <label class="form-label" for="form3Example1m">Area Name</label>
+                        <p class="btn btn-info">{{customer.propertyInfo.localAddress.areaname}}</p>
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <label class="form-label" for="form3Example1m">City Name</label>
+                        <p class="btn btn-info">{{customer.propertyInfo.localAddress.areaname}}</p>
+                    </div>
+                  </div>
+
+                <div class="col-md-4 mb-4">
+                  <div class="card">
+                    <label class="form-label" for="form3Example1m">District Name</label>
+                    <p class="btn btn-info">{{customer.propertyInfo.localAddress.district}}</p>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="card">
+                    <label class="form-label" for="form3Example1n">State</label>
+                    <p class="btn btn-info">{{customer.propertyInfo.localAddress.state}}</p>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <label class="form-label" for="form3Example1m">Pincode</label>
+                        <p class="btn btn-info">{{customer.propertyInfo.localAddress.pincode}}</p>
+                    </div>
+                  </div>
+                </div>
+   
+           
+            <!--Guarantor Details  -->
+            <h5 class="mb-5 text-uppercase" style="color: cornflowerblue">Guarantor Details </h5>
+              <div class="row">
+                <div class="col-md-4 mb-4">
+                  <div class="card">
+                    <label class="form-label" for="form3Example1m">Name</label>
+                    <p class="btn btn-info">{{customer.guarantorDetails.name}}</p>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="card">
+                    <label class="form-label" for="form3Example1n">Date of Birth</label>
+                    <p class="btn btn-info">{{customer.guarantorDetails.dob}}</p>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <label class="form-label" for="form3Example1m">Relationship with Customer</label>
+                        <p class="btn btn-info">{{customer.guarantorDetails.relationWithCustomer}}</p>
+                    </div>
+                  </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 mb-4">
+                  <div class="card">
+                    <label class="form-label" for="form3Example1m">Mobile number</label>
+                    <p class="btn btn-info">{{customer.guarantorDetails.mobNo}}</p>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="card">
+                    <label class="form-label" for="form3Example1n">Addharcard Number</label>
+                    <p class="btn btn-info">{{customer.guarantorDetails.adharCardNo}}</p>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <label class="form-label" for="form3Example1m">Job Details</label>
+                        <p class="btn btn-info">{{customer.guarantorDetails.jobDetails}}</p>
+                    </div>
+                  </div>
+             
+             <!-- <h6 class="mb-5 text-uppercase" style="color:darkred">Gaurentor Local Address</h6> -->
+                <!--Gaurentor Local Address -->
+            
+               
+                 <div class="col-md-3 mb-4">
+                    <div class="card">
+                      <label class="form-label" for="form3Example1m">House Number</label>
+                      <p class="btn btn-info">{{customer.guarantorDetails.loaclAddress.houseNo}}</p>
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-4">
+                    <div class="card">
+                      <label class="form-label" for="form3Example1n">Street Name</label>
+                      <p class="btn btn-info">{{customer.guarantorDetails.loaclAddress.streetName}}</p>
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-4">
+                      <div class="card">
+                          <label class="form-label" for="form3Example1m">Area Name</label>
+                          <p class="btn btn-info">{{customer.guarantorDetails.loaclAddress.areaname}}</p>
+                      </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                      <div class="card">
+                          <label class="form-label" for="form3Example1m">City Name</label>
+                          <p class="btn btn-info">{{customer.guarantorDetails.loaclAddress.cityname}}</p>
+                      </div>
+                    </div>
+               
+               
+                  <div class="col-md-4 mb-4">
+                    <div class="card">
+                      <label class="form-label" for="form3Example1m">District Name</label>
+                      <p class="btn btn-info">{{customer.guarantorDetails.loaclAddress.district}}</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="card">
+                      <label class="form-label" for="form3Example1n">State</label>
+                      <p class="btn btn-info">{{customer.guarantorDetails.loaclAddress.state}}</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                      <div class="card">
+                          <label class="form-label" for="form3Example1m">Pincode</label>
+                          <p class="btn btn-info">{{customer.guarantorDetails.loaclAddress.pincode}}</p>
+                      </div>
+                    </div> 
+                  </div>
+
+              </div>
+            </div>
+        
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+ 

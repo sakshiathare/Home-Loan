@@ -1,0 +1,43 @@
+<br>
+
+<div class="jumbotron"style="text-align:center" >
+    <h5 style="text-align: center; color: darkviolet;">! Generate Cibil Score Here!</h5>
+    <table class="table table-dark center " style="text-align:center" >
+<tr>
+    <td>Cibil Score</td>
+    <td> <button class="btn btn-success" (click)="cibilScore()">Generate Cibile Score</button></td>
+</tr>
+</table>
+</div>
+<form [formGroup]="cibilForm" (ngSubmit)="onSubmit()"> 
+    
+    <div class="jumbotron"style="text-align:center" >
+        <h5 style="text-align: center; color: darkviolet;">! Update Cibil Score !</h5>
+    <table class="table table-dark center " style="text-align:center" >
+        
+        <tr>
+            <td>Cibil Score</td>
+            <td> <input type="text" formControlName="cibilScore" [(ngModel)]="setScore" ></td>
+        </tr>
+        <tr>
+            <td>Cibil score time</td>
+            <td> <input type="text" formControlName="cibilScoreDateTime" ></td>
+        </tr>
+        <tr>
+            <td>Status</td>
+            <td> <input type="text" formControlName="status" placeholder="Status"></td>
+        </tr>
+        <tr>
+            <td>Remark</td>
+            <td><input type="text" formControlName="remark" placeholder="Remark"></td>
+        </tr>
+        <tr>
+            <td> Enquiry ID</td>
+            <td><input type="number" formControlName="eid" placeholder="enter password"></td>
+        </tr>
+       
+    </table>
+    <button class="btn btn-primary" type="submit">Update</button>&nbsp;&nbsp;
+    <button class="btn btn-primary" (click)="back()">Back</button>
+</div>
+</form>

@@ -1,0 +1,197 @@
+.contact-section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #f4f4f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-section h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .contact-form .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .contact-form label {
+    display: block;
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .contact-form input, 
+  .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+  }
+  
+  .contact-form textarea {
+    height: 150px;
+    resize: vertical;
+  }
+  
+  .contact-form .submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color:  rgb(82, 235, 255);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .contact-form .submit-btn:hover {
+    background-color: #0056b3;
+  }
+
+  
+
+
+
+
+
+
+
+
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Wrapper - Home Top Section */
+.wrapper .top_nav {
+  margin-top: 2px;
+  width: 100%;
+  height: 15%;
+  background: #fff;
+  padding: 0px 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrapper .top_nav .left {
+  display: flex;
+  align-items: center;
+  margin-left: 7%;
+}
+
+.wrapper .top_nav .left .logo p {
+  font-size: 28px;
+  font-weight: bold;
+  color: navy;
+  font-family: sans-serif;
+  font-style: oblique;
+  margin-right: 7%;
+  padding-bottom: 2%;
+  width: max-content;
+}
+
+.wrapper .top_nav .left .logo p span {
+  color: rgb(243, 222, 36);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 40px;
+  padding-bottom: 4%;
+  font-style: italic;
+}
+
+.wrapper .top_nav .right1 ul {
+  display: inline-flex;
+  float: right;
+  margin-top: 4%;
+  padding-bottom: 2%;
+}
+
+.wrapper .top_nav .right1 ul li {
+  float: right;
+  padding-right: 20px;
+  padding-bottom: 2%;
+}
+
+.wrapper .top_nav .right1 ul li p {
+  text-transform: lowercase;
+  padding-left: 10px;
+}
+
+.wrapper .top_nav .right1 ul li p:hover {
+  padding-top: 1%;
+  color: darkcyan;
+}
+
+.wrapper .top_nav .right1 ul li a {
+  display: block;
+  padding: 5px 8px;
+  color: black;
+  font-size: 15px;
+}
+
+.wrapper .top_nav .right1 ul li:last-child a {
+  color: black;
+}
+
+.nav {
+  display: flex;
+  height: 60px;
+  width: 100%;
+  background: #001846;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  flex-wrap: nowrap;
+}
+
+.nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  height: 60px;
+}
+
+.nav ul li {
+  height: 100%;
+  padding: 18px 26px;
+}
+
+.nav ul li a {
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.nav ul li.active,
+.nav ul li a:hover {
+  color: #111;
+  background: rgb(82, 235, 255);
+}
+
+.nav .menu-btn i {
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+
+input[type="checkbox"] {
+  display: none;
+}

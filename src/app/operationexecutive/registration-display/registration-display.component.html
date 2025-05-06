@@ -1,0 +1,38 @@
+
+<div class="container">
+    <table class="table table-striped" border="1">
+        <tbody>
+         <div class="container ">
+          <table class="table table-striped table-dark" border="1">
+        <tbody>
+           <tr class="bg-info"> 
+            <th>CID</th>
+            <th>NAME</th>
+            <th>DOB</th>
+            <th>AGE</th>
+            <th>GENDER</th>
+            <th>EMAIL</th>
+            <th>MOBILENO</th>
+            <th>AddharCardNo</th>
+            <th>TotalLoanRequired</th>
+            <th>View Details</th>
+          </tr>
+        </tbody>
+            <tr *ngFor="let c of customerlist| paginate: { itemsPerPage: count, currentPage: page}">
+                <td>{{c.customerid}}</td>
+                <td>{{c.name}}</td>
+                <td>{{c.dob}}</td>
+                <td>{{c.age}}</td>
+                <td>{{c.gender}}</td>
+                <td>{{c.email}}</td>
+                <td>{{c.mobileNo}}</td>
+                <td>{{c.adharCardNo}}</td>
+                <td>{{c.totalLoanRequired}}</td>
+                <td><a class="btn btn-success" [routerLink]="['viewAll',c.customerid]">View Details</a></td> 
+        </tr>
+    </table>
+</div>
+<div>
+    <pagination-controls (pageChange)="page = $event"></pagination-controls>
+  </div> 
+<router-outlet></router-outlet>

@@ -1,0 +1,563 @@
+<section class="h-100 bg-dark">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col">
+          <div class="card card-registration my-4">
+            <form [formGroup]="registerForm" (ngSubmit)="registerCall()">
+              <div class="col-xl-12">
+                <div class="card-body p-md-5 text-black">
+                  <h3 class="mb-5 text-uppercase" style="color: blueviolet;">Registration Form</h3>
+                  <!-- Basic information -->
+                  <h5 class="mb-5 text-uppercase" style="color: cornflowerblue">Basic Information</h5>
+                  <div class="row">
+                    <div class="col-md-3 mb-4">
+                      <div class="form-outline">
+                        <label class="form-label" for="form3Example1m">Name</label>
+                        <input type="text" id="form3Example1m" class="form-control form-control-lg" formControlName="name" />
+                      </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                      <div class="form-outline">
+                        <label class="form-label" for="form3Example1n">Date Of Birth</label>
+                        <input type="date" id="form3Example1n" class="form-control form-control-lg" formControlName="dob" />
+                      </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                        <div class="form-outline">
+                            <label class="form-label" for="form3Example1m">Age</label>
+                            <input type="number" id="form3Example1m" class="form-control form-control-lg" formControlName="age" />
+                        </div>
+                      </div>
+                      <div class="col-md-3 mb-4">
+                        <div class="form-outline">
+                            <label class="form-label" for="form3Example1m">Email</label>
+                            <input type="email" id="form3Example1m" class="form-control form-control-lg" formControlName="email" />
+                        </div>
+                      </div>
+                  </div>
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <h6 class="mb-0 me-4">Gender:</h6><br>
+                    <div class="form-check form-check-inline mb-0 me-4">
+                      <input class="form-check-input" type="radio" value="Male" formControlName="gender" />
+                      <label class="form-check-label" for="maleGender">Male</label>
+                    </div>
+   
+                    <div class="form-check form-check-inline mb-0 me-4">
+                        <input class="form-check-input" type="radio" value="Female" formControlName="gender" />
+                        <label class="form-check-label" for="femaleGender">Female</label>
+                    </div>
+  
+                    <div class="form-check form-check-inline mb-0 me-4">
+                        <input class="form-check-input" type="radio" value="Other" formControlName="gender" />
+                        <label class="form-check-label" for="otherGender">Male</label>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="form-outline">
+                        <label class="form-label" for="form3Example1m">Mobile No</label>
+                        <input type="number"  class="form-control form-control-lg" formControlName="mobileNo" />
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="form-outline">
+                        <label class="form-label" for="form3Example1m">Addition Mobile No</label>
+                        <input type="number"  class="form-control form-control-lg" formControlName="additionalMobileNo" />
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="form-outline">
+                        <label class="form-label" for="form3Example1m">Pancard No</label>
+                        <input type="text"  class="form-control form-control-lg" formControlName="panCardNo" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                  <div class="form-outline">
+                    <label class="form-label" for="form3Example1m">Addhar Number</label>
+                    <input type="number" class="form-control form-control-lg" formControlName="adharCardNo" />
+                  </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                  <div class="form-outline">
+                    <label class="form-label" for="form3Example1n">Ammount Paid For Home</label>
+                    <input type="number" id="form3Example1n" class="form-control form-control-lg" formControlName="amountPaidForHome" />
+                  </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="form-outline">
+                        <label class="form-label" for="form3Example1m">Total Loan required</label>
+                        <input type="number" id="form3Example1m" class="form-control form-control-lg" formControlName="totalLoanRequired" />
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-4">
+                    <div class="form-outline">
+                        <label class="form-label" for="form3Example1m">Education</label>
+                        <input type="text" id="form3Example1m" class="form-control form-control-lg" formControlName="educationInfo" />
+                    </div>
+                  </div>
+              </div>
+
+              <!-- Dependant Information Start -->
+              <h5 class="mb-5 text-uppercase" style="color: cornflowerblue">Dependent Information</h5>
+            <div formGroupName="dependant">
+              <div class="row">
+                <div class="col-md-3 mb-4">
+                  <div class="form-outline">
+                    <label class="form-label" for="form3Example1m">Father Name</label>
+                    <input type="text"  class="form-control form-control-lg" formControlName="fatherName" />
+                  </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                  <div class="form-outline">
+                    <label class="form-label" for="form3Example1n">Mother Name</label>
+                    <input type="text" class="form-control form-control-lg" formControlName="motherName" />
+                  </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="form-outline">
+                        <label class="form-label" for="form3Example1m">Total Family Member</label>
+                        <input type="number" class="form-control form-control-lg" formControlName="noOfFamilyMember" />
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-4">
+                    <div class="form-outline">
+                        <label class="form-label" for="form3Example1m">Number Of children</label>
+                        <input type="number" class="form-control form-control-lg" formControlName="noOfChild" />
+                    </div>
+                  </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 mb-4">
+                  <div class="form-outline">
+                    <label class="form-label" for="form3Example1m">Marital Status</label>
+                    <input type="text" id="form3Example1m" class="form-control form-control-lg" formControlName="maritalStatus" />
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="form-outline">
+                    <label class="form-label" for="form3Example1n">Dependent Member</label>
+                    <input type="number" id="form3Example1n" class="form-control form-control-lg" formControlName="dependentMember" />
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="form-outline">
+                        <label class="form-label" for="form3Example1m">Spouse Name</label>
+                        <input type="text" id="form3Example1m" class="form-control form-control-lg" formControlName="spouseName" />
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+             <!-- Customer Address -->
+             <h5 class="mb-5 text-uppercase" style="color: cornflowerblue">Customer Address</h5>
+          <div formGroupName="customerAddress">
+            <h6 class="mb-5 text-uppercase" style="color:darkred">Permanat Address</h6>
+              <!-- permanent Address -->
+            <div formGroupName="permanentAddress">
+              <div class="row">
+                <div class="col-md-3 mb-4">
+                  <div class="form-outline">
+                    <label class="form-label" for="form3Example1m">House Number</label>
+                    <input type="number"  class="form-control form-control-lg" formControlName="houseNo" />
+                  </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                  <div class="form-outline">
+                    <label class="form-label" for="form3Example1n">Street Name</label>
+                    <input type="text" class="form-control form-control-lg" formControlName="streetName" />
+                  </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="form-outline">
+                        <label class="form-label" for="form3Example1m">Area Name</label>
+                        <input type="text" class="form-control form-control-lg" formControlName="areaname" />
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-4">
+                    <div class="form-outline">
+                        <label class="form-label" for="form3Example1m">City Name</label>
+                        <input type="text" class="form-control form-control-lg" formControlName="cityname" />
+                    </div>
+                  </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 mb-4">
+                  <div class="form-outline">
+                    <label class="form-label" for="form3Example1m">District Name</label>
+                    <input type="text"class="form-control form-control-lg" formControlName="district" />
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="form-outline">
+                    <label class="form-label" for="form3Example1n">State</label>
+                    <input type="text" class="form-control form-control-lg" formControlName="state" />
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="form-outline">
+                        <label class="form-label" for="form3Example1m">Pincode</label>
+                        <input type="number" class="form-control form-control-lg" formControlName="pincode" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+                 <!-- Local Address -->
+                 <input type="checkbox" (click)="address()">&nbsp;&nbsp;<span style="color:dodgerblue">Same as Permanent Address</span>
+                 <h6 class="mb-5 text-uppercase" style="color:darkred">Local Address</h6>
+            <div formGroupName="localAddress">
+                <div class="row">
+                  <div class="col-md-3 mb-4">
+                    <div class="form-outline">
+                      <label class="form-label" for="form3Example1m">House Number</label>
+                      <input type="number"  class="form-control form-control-lg" formControlName="houseNo" />
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-4">
+                    <div class="form-outline">
+                      <label class="form-label" for="form3Example1n">Street Name</label>
+                      <input type="text" class="form-control form-control-lg" formControlName="streetName" />
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-4">
+                      <div class="form-outline">
+                          <label class="form-label" for="form3Example1m">Area Name</label>
+                          <input type="text" class="form-control form-control-lg" formControlName="areaname" />
+                      </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                      <div class="form-outline">
+                          <label class="form-label" for="form3Example1m">City Name</label>
+                          <input type="text" class="form-control form-control-lg" formControlName="cityname" />
+                      </div>
+                    </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4 mb-4">
+                    <div class="form-outline">
+                      <label class="form-label" for="form3Example1m">District Name</label>
+                      <input type="text"class="form-control form-control-lg" formControlName="district" />
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="form-outline">
+                      <label class="form-label" for="form3Example1n">State</label>
+                      <input type="text" class="form-control form-control-lg" formControlName="state" />
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                      <div class="form-outline">
+                          <label class="form-label" for="form3Example1m">Pincode</label>
+                          <input type="number" class="form-control form-control-lg" formControlName="pincode" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div> 
+
+
+            <!-- Profession Information Start -->
+            <h5 class="mb-5 text-uppercase" style="color: cornflowerblue"> Profession Information </h5>       
+            <div formGroupName="profession">
+                <div class="row">
+                  <div class="col-md-4 mb-4">
+                    <div class="form-outline">
+                      <label class="form-label" for="form3Example1m">Profession Type</label>
+                      <input type="text"  class="form-control form-control-lg" formControlName="professionType" />
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="form-outline">
+                      <label class="form-label" for="form3Example1n">Salary</label>
+                      <input type="number" class="form-control form-control-lg" formControlName="salary" />
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                      <div class="form-outline">
+                          <label class="form-label" for="form3Example1m">Salary Type</label>
+                          <input type="text" class="form-control form-control-lg" formControlName="salaryType" />
+                      </div>
+                    </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <label class="form-label" for="form3Example1m">Working Period</label>
+                      <input type="number" id="form3Example1m" class="form-control form-control-lg" formControlName="workingPeriod" />
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <label class="form-label" for="form3Example1n">Designation</label>
+                      <input type="text" id="form3Example1n" class="form-control form-control-lg" formControlName="designation" />
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+                        <!-- Previous Loan Information Start -->
+            <h5 class="mb-5 text-uppercase" style="color: cornflowerblue"> Previousloan Information </h5>       
+            <div formGroupName="previousloan">
+                <div class="row">
+                  <div class="col-md-4 mb-4">
+                    <div class="form-outline">
+                      <label class="form-label" for="form3Example1m">Loanamount</label>
+                      <input type="number"  class="form-control form-control-lg" formControlName="loanAmount" />
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="form-outline">
+                      <label class="form-label" for="form3Example1n">Tenure</label>
+                      <input type="number" class="form-control form-control-lg" formControlName="tenure" />
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                      <div class="form-outline">
+                          <label class="form-label" for="form3Example1m">Paid Amount</label>
+                          <input type="number" class="form-control form-control-lg" formControlName="paidAmount" />
+                      </div>
+                    </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4 mb-4">
+                    <div class="form-outline">
+                      <label class="form-label" for="form3Example1m">Remaining Amount</label>
+                      <input type="number"  class="form-control form-control-lg" formControlName="remainingAmount" />
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="form-outline">
+                      <label class="form-label" for="form3Example1n">Status</label>
+                      <input type="text" class="form-control form-control-lg" formControlName="status" />
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="form-outline">
+                      <label class="form-label" for="form3Example1n">Remark</label>
+                      <input type="text" class="form-control form-control-lg" formControlName="remark" />
+                    </div>
+                  </div>
+                </div>
+            </div>
+                    <!-- Account Details Start -->
+            <h5 class="mb-5 text-uppercase" style="color: cornflowerblue"> Account Details </h5>       
+            <div formGroupName="accountDetails">
+                <div class="row">
+                  <div class="col-md-4 mb-4">
+                    <div class="form-outline">
+                      <label class="form-label" for="form3Example1m">Account type</label>
+                      <input type="text"  class="form-control form-control-lg" formControlName="accountype" />
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="form-outline">
+                      <label class="form-label" for="form3Example1n">Account Balanace</label>
+                      <input type="number" class="form-control form-control-lg" formControlName="accountBalance" />
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                      <div class="form-outline">
+                          <label class="form-label" for="form3Example1m">Account Holder Name</label>
+                          <input type="text" class="form-control form-control-lg" formControlName="accountHolderName" />
+                      </div>
+                    </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <label class="form-label" for="form3Example1m">Account Status</label>
+                      <input type="text"  class="form-control form-control-lg" formControlName="accountStatus" />
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <label class="form-label" for="form3Example1n">Account Number</label>
+                      <input type="number" class="form-control form-control-lg" formControlName="accountNo" />
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <!-- Propery information -->
+            <h5 class="mb-5 text-uppercase" style="color: cornflowerblue">ProperyInfo</h5>
+          <div formGroupName="propertyInfo">
+            <div class="row">
+              <div class="col-md-4 mb-4">
+                <div class="form-outline">
+                  <label class="form-label" for="form3Example1m">Propery type</label>
+                  <input type="text"  class="form-control form-control-lg" formControlName="propertytype" />
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="form-outline">
+                  <label class="form-label" for="form3Example1n">Property Price</label>
+                  <input type="number" class="form-control form-control-lg" formControlName="propertyPrice" />
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                  <div class="form-outline">
+                      <label class="form-label" for="form3Example1m">Construction Price</label>
+                      <input type="number" class="form-control form-control-lg" formControlName="constructionPrice" />
+                  </div>
+                </div>
+            </div>
+            <h6 class="mb-5 text-uppercase" style="color:darkred">PropertyLocal Address</h6>
+              <!--Property Local Address -->
+            <div formGroupName="localAddress">
+              <div class="row">
+                <div class="col-md-3 mb-4">
+                  <div class="form-outline">
+                    <label class="form-label" for="form3Example1m">House Number</label>
+                    <input type="number"  class="form-control form-control-lg" formControlName="houseNo" />
+                  </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                  <div class="form-outline">
+                    <label class="form-label" for="form3Example1n">Street Name</label>
+                    <input type="text" class="form-control form-control-lg" formControlName="streetName" />
+                  </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="form-outline">
+                        <label class="form-label" for="form3Example1m">Area Name</label>
+                        <input type="text" class="form-control form-control-lg" formControlName="areaname" />
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-4">
+                    <div class="form-outline">
+                        <label class="form-label" for="form3Example1m">City Name</label>
+                        <input type="text" class="form-control form-control-lg" formControlName="cityname" />
+                    </div>
+                  </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 mb-4">
+                  <div class="form-outline">
+                    <label class="form-label" for="form3Example1m">District Name</label>
+                    <input type="text"class="form-control form-control-lg" formControlName="district" />
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="form-outline">
+                    <label class="form-label" for="form3Example1n">State</label>
+                    <input type="text" class="form-control form-control-lg" formControlName="state" />
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="form-outline">
+                        <label class="form-label" for="form3Example1m">Pincode</label>
+                        <input type="number" class="form-control form-control-lg" formControlName="pincode" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--Guarantor Details  -->
+            <h5 class="mb-5 text-uppercase" style="color: cornflowerblue">Guarantor Details </h5>
+            <div formGroupName="guarantorDetails">
+              <div class="row">
+                <div class="col-md-4 mb-4">
+                  <div class="form-outline">
+                    <label class="form-label" for="form3Example1m">Name</label>
+                    <input type="text"  class="form-control form-control-lg" formControlName="name" />
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="form-outline">
+                    <label class="form-label" for="form3Example1n">Date of Birth</label>
+                    <input type="date" class="form-control form-control-lg" formControlName="dob" />
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="form-outline">
+                        <label class="form-label" for="form3Example1m">Relationship with Customer</label>
+                        <input type="text" class="form-control form-control-lg" formControlName="relationWithCustomer" />
+                    </div>
+                  </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 mb-4">
+                  <div class="form-outline">
+                    <label class="form-label" for="form3Example1m">Mobile number</label>
+                    <input type="number"  class="form-control form-control-lg" formControlName="mobNo" />
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                  <div class="form-outline">
+                    <label class="form-label" for="form3Example1n">Addharcard Number</label>
+                    <input type="number" class="form-control form-control-lg" formControlName="adharCardNo" />
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="form-outline">
+                        <label class="form-label" for="form3Example1m">Job Details</label>
+                        <input type="text" class="form-control form-control-lg" formControlName="jobDetails" />
+                    </div>
+                  </div>
+              </div>
+              <h6 class="mb-5 text-uppercase" style="color:darkred">Gaurentor Local Address</h6>
+                <!--Gaurentor Local Address -->
+              <div formGroupName="localAddress">
+                <div class="row">
+                  <div class="col-md-3 mb-4">
+                    <div class="form-outline">
+                      <label class="form-label" for="form3Example1m">House Number</label>
+                      <input type="number"  class="form-control form-control-lg" formControlName="houseNo" />
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-4">
+                    <div class="form-outline">
+                      <label class="form-label" for="form3Example1n">Street Name</label>
+                      <input type="text" class="form-control form-control-lg" formControlName="streetName" />
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-4">
+                      <div class="form-outline">
+                          <label class="form-label" for="form3Example1m">Area Name</label>
+                          <input type="text" class="form-control form-control-lg" formControlName="areaname" />
+                      </div>
+                    </div>
+                    <div class="col-md-3 mb-4">
+                      <div class="form-outline">
+                          <label class="form-label" for="form3Example1m">City Name</label>
+                          <input type="text" class="form-control form-control-lg" formControlName="cityname" />
+                      </div>
+                    </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4 mb-4">
+                    <div class="form-outline">
+                      <label class="form-label" for="form3Example1m">District Name</label>
+                      <input type="text"class="form-control form-control-lg" formControlName="district" />
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                    <div class="form-outline">
+                      <label class="form-label" for="form3Example1n">State</label>
+                      <input type="text" class="form-control form-control-lg" formControlName="state" />
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-4">
+                      <div class="form-outline">
+                          <label class="form-label" for="form3Example1m">Pincode</label>
+                          <input type="number" class="form-control form-control-lg" formControlName="pincode" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Submit Button -->
+                  <div class="d-flex justify-content-end pt-3">
+                    <button type="submit"  class="btn btn-warning btn-lg ms-2">Submit Form and next to UploadForm</button>
+                  </div>
+              </div>
+            </div>
+        </form>
+        
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+

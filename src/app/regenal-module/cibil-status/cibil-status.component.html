@@ -1,0 +1,29 @@
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Cibil ID</th>
+        <th scope="col">Cibil Score</th>
+        <th scope="col">Cibil Score Time</th>
+        <th scope="col">Status</th>
+        <th scope="col">Remark</th>
+        <th scope="col">Enquiry ID</th>
+        <th scope="col">Request To Mail</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let c of  cibilList| paginate: { itemsPerPage: count, currentPage: page}">
+        <td>{{c.cibilId}}</td>
+        <td>{{c.cibilScore}}</td>
+        <td>{{c.cibilScoreDateTime}}</td>
+        <td>{{c.status}}</td>
+        <td>{{c.remark}}</td>
+        <td>{{c.eid}}</td>
+        <td><a (click)="emailCall(c)" class="btn btn-info">Email Send&nbsp;&nbsp;<i class="fa fa-envelope"></i>
+        </a></td>
+      </tr>
+    </tbody>
+    <p style="color:darkgreen">{{msg}}</p>
+  </table>
+  <div>
+    <pagination-controls (pageChange)="page = $event"></pagination-controls>
+  </div>

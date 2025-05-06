@@ -1,0 +1,55 @@
+<!-- Doument Form Start -->
+<div class="jumbotron"style="text-align:center" >
+    <form [formGroup]="DocForm" (ngSubmit)="save()">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Customer Id</label>
+          <input type="text" class="form-control col-md-4" formControlName="customerid">
+         
+        </div><br>
+        <div class="form-group">
+          <label for="exampleInputPassword1">pancard</label>
+          <input type="file" class="form-control  col-md-4" (change)="onSelectedFile1($event)">
+        </div><br>
+        <div class="form-group">
+            <label for="exampleInputEmail1">addressproof</label>
+            <input type="file" class="form-control col-md-4" (change)="onSelectedFile2($event)">
+           
+          </div><br>
+          <div class="form-group">
+            <label for="exampleInputPassword1">itr</label>
+            <input type="file" class="form-control  col-md-4" (change)="onSelectedFile3($event)">
+          </div><br>
+          <div class="form-group">
+            <label for="exampleInputPassword1"> adharcard</label>
+            <input type="file" class="form-control  col-md-4" (change)="onSelectedFile4($event)">
+          </div><br>
+          <div class="form-group">
+          <label for="exampleInputPassword1">photo</label>
+          <input type="file" class="form-control  col-md-4" (change)="onSelectedFile5($event)">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">signature</label>
+            <input type="file" class="form-control col-md-4" (change)="onSelectedFile6($event)">
+           
+          </div><br>
+          <div class="form-group">
+            <label for="exampleInputPassword1">thumb</label>
+            <input type="file" class="form-control  col-md-4" (change)="onSelectedFile7($event)">
+          </div><br>
+          <div class="form-group">
+            <label for="exampleInputPassword1"> bankcheque</label>
+            <input type="file" class="form-control  col-md-4" (change)="onSelectedFile8($event)">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">property_details</label>
+            <input type="file" class="form-control  col-md-4" (change)="onSelectedFile9($event)">
+          </div><br>
+          <div class="form-group">
+            <label for="exampleInputPassword1">salaryslip</label>
+            <input type="file" class="form-control  col-md-4" (change)="onSelectedFile10($event)">
+          </div><br>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    

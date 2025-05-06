@@ -1,0 +1,171 @@
+
+    <section class="h-100 bg-dark">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col">
+              <div class="card card-registration my-4">
+                <div class="row g-0">
+                 <form [formGroup]="verificationForm">
+                  <div class="col-xl-12">
+                    <div class="card-body p-md-5 text-black">
+                      <h3 class="mb-5 text-uppercase">Document Varification</h3>
+      
+                      <div class="row ">
+                        <div class="col-md-3 mb-4 ">
+                          <div class="form-outline">
+                            <label class="form-label" for="form3Example1m">Document ID</label>
+                            <div *ngFor="let d of retrievedDoc">{{d.documentid}}</div>
+                          </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                          <div class="form-outline">
+                            <label class="form-label" for="form3Example1n">Customer ID</label>
+                            <div *ngFor="let d of retrievedDoc">{{d.customerid}}</div>
+                          </div>
+                        </div>
+                   
+                            <div class="col-md-3 mb-4">
+                              <div class="form-outline">
+                                <label class="form-label" for="form3Example1m">Address Proof</label>
+                                <div *ngIf="retrievedDoc">
+                                    <div *ngFor="let d of retrievedDoc">
+                                        <img [src]="'data:image/jpeg;base64,'+d.addressproof">
+                                    </div>
+                                </div>
+                                <input type="radio" value="Verified" formControlName="addressProof" />Verified&nbsp;&nbsp;
+                                <input type="radio" value="Rejected" formControlName="addressProof" />Rejected
+                              </div>
+                            </div>
+                            <div class="col-md-3 mb-4">
+                              <div class="form-outline">
+                                <label class="form-label" for="form3Example1n">ITR</label>
+                                <td>
+                                    <div *ngIf="retrievedDoc">
+                                        <div *ngFor="let d of retrievedDoc">
+                                            <img [src]="'data:image/jpeg;base64,'+d.itr">
+                                        </div>
+                                    </div>
+                                </td>
+                                <input type="radio" value="Verified"  formControlName="itr" />Verified&nbsp;&nbsp;
+                                <input type="radio" value="Rejected"  formControlName="itr" />Rejected
+                              </div>
+                            </div>
+                      </div>
+                     <!-- second row -->
+                      <div class="row">
+                        <div class="col-md-3 mb-4">
+                          <div class="form-outline">
+                            <label class="form-label" for="form3Example1m1">Pancard</label>
+                            <div *ngIf="retrievedDoc">
+                                <div *ngFor="let d of retrievedDoc">
+                                    <img [src]="'data:image/jpeg;base64,'+d.pancard">
+                                </div>
+                            </div>
+                            <input type="radio" value="Verified"  formControlName="pancard" />Verified&nbsp;&nbsp;
+                            <input type="radio" value="Rejected"  formControlName="pancard" />Rejected
+                          </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                          <div class="form-outline">
+                            <label class="form-label" for="form3Example1n1">Addharcard</label>
+                            <div *ngIf="retrievedDoc">
+                                <div *ngFor="let d of retrievedDoc">
+                                    <img [src]="'data:image/jpeg;base64,'+d.adharcard">
+                                </div>
+                            </div>
+                            <input type="radio" value="Verified" formControlName="adharcard" />Verified&nbsp;&nbsp;
+                            <input type="radio" value="Rejected" formControlName="adharcard" />Rejected
+                          </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div class="form-outline">
+                              <label class="form-label" for="form3Example1m1">Photo</label>
+                              <div *ngIf="retrievedDoc">
+                                <div *ngFor="let d of retrievedDoc">
+                                    <img [src]="'data:image/jpeg;base64,'+d.photo">
+                                </div>
+                            </div>
+                            <input type="radio" value="Verified" formControlName="photo" />Verified&nbsp;&nbsp;
+                            <input type="radio" value="Rejected" formControlName="photo" />Rejected
+                            </div>
+                          </div>
+                          <div class="col-md-3 mb-4">
+                            <div class="form-outline">
+                              <label class="form-label" for="form3Example1n1">Signature</label>
+                              <div *ngIf="retrievedDoc">
+                                <div *ngFor="let d of retrievedDoc">
+                                    <img [src]="'data:image/jpeg;base64,'+d.signature">
+                                </div>
+                            </div>
+                            <input type="radio" value="Verified" formControlName="signature" />Verified&nbsp;&nbsp;
+                            <input type="radio" value="Rejected" formControlName="signature" />Rejected
+                            </div>
+                          </div>
+                      </div>
+                      <!-- Thier row -->
+                      <div class="row">
+                        <div class="col-md-3 mb-4">
+                          <div class="form-outline">
+                            <label class="form-label" for="form3Example1m1">Thumb</label>
+                            <div *ngIf="retrievedDoc">
+                                <div *ngFor="let d of retrievedDoc">
+                                    <img [src]="'data:image/jpeg;base64,'+d.thumb">
+                                </div>
+                            </div>
+                            <input type="radio" value="Verified" formControlName="thumb" />Verified&nbsp;&nbsp;
+                            <input type="radio" value="Rejected" formControlName="thumb" />Rejected
+                          </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                          <div class="form-outline">
+                            <label class="form-label" for="form3Example1n1">Bank check</label>
+                            <div *ngIf="retrievedDoc">
+                                <div *ngFor="let d of retrievedDoc">
+                                    <img [src]="'data:image/jpeg;base64,'+d.bankcheque">
+                                </div>
+                            </div>
+                            <input type="radio" value="Verified" formControlName="bankcheck" />Verified&nbsp;&nbsp;
+                            <input type="radio" value="Rejected" formControlName="bankcheck" />Rejected
+                          </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div class="form-outline">
+                              <label class="form-label" for="form3Example1m1">Property Details</label>
+                              <div *ngIf="retrievedDoc">
+                                <div *ngFor="let d of retrievedDoc">
+                                    <img [src]="'data:image/jpeg;base64,'+d.property_details">
+                                </div>
+                                </div>
+                                <input type="radio" value="Verified" formControlName="propertydetails" />Verified&nbsp;&nbsp;
+                                <input type="radio" value="Rejected" formControlName="propertydetails" />Rejected
+                            </div>
+                          </div>
+                          <div class="col-md-3 mb-4">
+                            <div class="form-outline">
+                              <label class="form-label" for="form3Example1n1">Salaray Slip</label>
+                              <div *ngIf="retrievedDoc">
+                                <div *ngFor="let d of retrievedDoc">
+                                    <img [src]="'data:image/jpeg;base64,'+d.salaryslip">
+                                </div>
+                            </div>
+                            <input type="radio" value="Verified" formControlName="salaryslip" />Verified&nbsp;&nbsp;
+                            <input type="radio" value="Rejected" formControlName="salaryslip" />Rejected
+                            </div>
+                          </div>
+                      </div>
+                      <div *ngFor="let d of retrievedDoc">
+                          <input class="btn btn-info" type="button" [routerLink]="['sanctionletter',d.documentid]" [disabled]="!verificationForm.valid" value="Sanction letter">
+                            <button class="btn btn-dark float-right" (click)="back()">Back</button>
+                        </div>
+
+                    </div>
+                  </div>
+                </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+<router-outlet></router-outlet>
