@@ -1,99 +1,100 @@
 <div class="wrapper">
-    <div class="top_nav">
-      <div class="left">
-        <div class="logo"><p><span >SanyuInfotech</span>Home Loan</p></div>
-        
-    </div> 
+  <!-- Top Navigation -->
+  <div class="top_nav">
+    <div class="left">
+      <div class="logo">
+        <p><span>SanyuInfotech</span>Home Loan</p>
+      </div>
+    </div>
+    
     <div class="right1">
       <ul>
-        <li><a href="#">Email US<br></a><p>hr@sanyuinfotech.com</p></li>
-        
-        <li><a href="#">Call Us</a><p>+91 9870000010</p></li>
-       
-        
+        <li>
+          <a href="mailto:hr@sanyuinfotech.com">Email US</a>
+          <p>hr@sanyuinfotech.com</p>
+        </li>
+        <li>
+          <a href="tel:+919870000010">Call Us</a>
+          <p>+91 9870000010</p>
+        </li>
       </ul>
+    </div>
     
+    <div>
+      <button routerLink="/login" class="btn">Login</button>
     </div>
-    <div >
-      <button routerLink="/login" class="btn" style="height: 40px; width: 80px; background-color:aqua; margin-right: 30px; " >Login</button>
+  </div>
+  
+  <!-- Main Navigation -->
+  <div class="manual">
+    <div class="nav" data-spy="affix" data-offset-top="197">
+      <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul>
+        <li class="active"><a href="#">Home</a></li>
+        <li><a routerLink="/about">About us</a></li>
+        <li><a routerLink="/wwo">What we Offer</a></li>
+        <li><a routerLink="/enquiry">Process to Apply</a></li>
+        <li><a>Loan EMI Calculator</a></li>
+        <li><a routerLink="/faq">FAQs</a></li>
+        <li><a routerLink="/contact">Contact Us</a></li>
+      </ul>
     </div>
-    </div>
-     <div class="manual">
-    <div class="nav " data-spy="affix" data-offset-top="197">
-      <nav>
-       
-        <input type="checkbox" id="click">
-       
-        <ul>
-          <li class="active"><a  href="#">Home</a></li>
-          <li><a href="#" routerLink="/about" >About us</a></li>
-          <li><a href="#" routerLink="/wwo">What we Offer</a></li>
-          <li><a routerLink="/enquiry">process to apply</a></li>
-          <li><a >Loan EMI calculator</a></li>
-          <li><a href="#" routerLink="/faq">FAQs</a></li>
-          <li><a href="#" routerLink="/contact">Contact Us</a></li>
-          
-        </ul>
-      </nav>
-    </div>
+    
     <router-outlet></router-outlet>
-    <div class="container-fluid" style="height:550px" id="images">
-      <div class="container-fluid">
-        
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-          <!-- Indicators -->
-          <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-            <li data-target="#myCarousel" data-slide-to="3"></li>
-            <li data-target="#myCarousel" data-slide-to="4"></li>
-            <li data-target="#myCarousel" data-slide-to="5"></li>
-            <li data-target="#myCarousel" data-slide-to="6"></li>
-            <li data-target="#myCarousel" data-slide-to="7"></li>
-            <li data-target="#myCarousel" data-slide-to="8"></li>
-          </ol>
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner">
-            <div class="item active" id="educaion">
-              <img src="assets\images\home.png" alt="Los Angeles" style="width:100%; height: 590px;">
-
-            </div> 
+    
+    <!-- Carousel -->
+    <div class="container-fluid" id="images">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active" id="education">
+            <img src="assets/images/home.png" alt="Home Loan Solutions">
+            <div class="carousel-caption">
+              <h2>Your Dream Home Awaits</h2>
+              <p>Flexible home loan solutions tailored to your needs</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <h3>SanyuInfotech <span>Home Loan</span></h3>
+      <p>Empowering your dreams with the right home loan solutions. We provide competitive rates and personalized service to help you own your dream home.</p>
+    </div>
+    
+    <div class="footer-middle">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a routerLink="/home">Home</a></li>
+        <li><a routerLink="/about">About Us</a></li>
+        <li><a routerLink="/wwo">What We Offer</a></li>
+        <li><a routerLink="/enquiry">Apply Now</a></li>
+        <li><a routerLink="/faq">FAQs</a></li>
+        <li><a routerLink="/contact">Contact</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-right">
+      <h4>Contact Us</h4>
+      <p><i class="fas fa-envelope"></i> hr@sanyuinfotech.com</p>
+      <p><i class="fas fa-phone"></i> +91 9870000010</p>
+      <p><i class="fas fa-map-marker-alt"></i> Corporate Office Address</p>
+    </div>
   </div>
-
   
-
-  
-  
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-left">
-        <h3>SanyuInfotech Home Loan</h3>
-        <p>Empowering your dreams with the right home loan solutions.</p>
-      </div>
-      <div class="footer-middle">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a routerLink="/home">Home</a></li>
-          <li><a routerLink="/about">About Us</a></li>
-          <li><a routerLink="/wwo">What We Offer</a></li>
-          <li><a routerLink="/enquiry">Apply</a></li>
-          <li><a routerLink="/faq">FAQs</a></li>
-          <li><a routerLink="/contact">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-right">
-        <h4>Contact Us</h4>
-        <p>Email: hr@sanyuinfotech.com</p>
-        <p>Phone: +91 9870000010</p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 SanyuInfotech. All rights reserved.</p>
-    </div>
-  </footer>
-  
+  <div class="footer-bottom">
+    <p>&copy; 2025 SanyuInfotech. All rights reserved. | Privacy Policy | Terms of Service</p>
+  </div>
+</footer>

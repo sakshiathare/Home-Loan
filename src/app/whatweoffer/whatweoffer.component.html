@@ -1,38 +1,48 @@
-<!-- Home Section -->
-<div class="wrapper"> 
-    <div class="top_nav">
-      <div class="left">
-        <div class="logo"><p><span>SanyuInfotech</span>Home Loan</p></div>
-      </div> 
-      <div class="right1">
-        <ul>
-          <li><a href="#"><span style="font-weight: bold; font-size: 20px;">EMAIL US</span><br><p>hr@sanyuinfotech.com</p></a></li>
-          <li><a href="#"><span style="font-weight: bold; font-size: 20px;">CALL US</span><br><p>+91 9870000010</p></a></li>
-        </ul>
-      </div>
-      <div>
-        <button routerLink="/login" class="btn" style="height: 40px; width: 80px; background-color:aqua; margin-right: 30px;">Login</button>
+<div class="wrapper">
+  <!-- Top Navigation -->
+  <div class="top_nav">
+    <div class="left">
+      <div class="logo">
+        <p><span>SanyuInfotech</span>Home Loan</p>
       </div>
     </div>
-  
-
-    <div class="manual">
-      <div class="nav" data-spy="affix" data-offset-top="197">
-        <nav>
-          <input type="checkbox" id="click">
-          <ul>
-            <li><a routerLink="/home">Home</a></li>
-            <li><a routerLink="/about">About us</a></li>
-            <li class="active"><a routerLink="/wow">What we Offer</a></li>
-            <li><a routerLink="/enquiry">Process to Apply</a></li>
-            <li><a href="#">Loan EMI Calculator</a></li>
-            <li><a href="#" routerLink="/faq">FAQs</a></li>
-            <li><a href="#" routerLink="/contact">Contact Us</a></li>
-          </ul>
-        </nav>
-      </div>
+    
+    <div class="right1">
+      <ul>
+        <li>
+          <a href="mailto:hr@sanyuinfotech.com">Email US</a>
+          <p>hr@sanyuinfotech.com</p>
+        </li>
+        <li>
+          <a href="tel:+919870000010">Call Us</a>
+          <p>+91 9870000010</p>
+        </li>
+      </ul>
+    </div>
+    
+    <div>
+      <button routerLink="/login" class="btn">Login</button>
     </div>
   </div>
+  
+  <!-- Main Navigation -->
+  <div class="manual">
+    <div class="nav" data-spy="affix" data-offset-top="197">
+      <div class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul>
+        <li ><a href="#">Home</a></li>
+        <li ><a routerLink="/about">About us</a></li>
+        <li class="active"><a routerLink="/wwo">What we Offer</a></li>
+        <li><a routerLink="/enquiry">Process to Apply</a></li>
+        <li><a>Loan EMI Calculator</a></li>
+        <li><a routerLink="/faq">FAQs</a></li>
+        <li><a routerLink="/contact">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <router-outlet></router-outlet>
     <div class="container1">
   <!-- What We Offer Section -->
   <div class="container about-container">
