@@ -44,24 +44,75 @@
     
     <router-outlet></router-outlet>
     
-    <!-- Carousel -->
-    <div class="container-fluid" id="images">
-      <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active" id="education">
-            <img src="assets/images/home.png" alt="Home Loan Solutions">
-            <div class="carousel-caption">
-              <h2>Your Dream Home Awaits</h2>
-              <p>Flexible home loan solutions tailored to your needs</p>
-            </div>
+    <!-- Insert this right after your existing top_nav div -->
+<div class="financial-hero">
+  <div class="carousel-container">
+    <!-- Slide 1 - Rate Highlight -->
+    <div class="carousel-slide active">
+      <div class="slide-background" style="background-image: url('assets/images/h1.png');"></div>
+      <div class="slide-content">
+        <div class="financial-badge">Best Offer</div>
+        <h2>Home Loans from <span>8.4%</span> Interest</h2>
+        <div class="rate-details">
+          <div class="rate-item">
+            <i class="fas fa-home"></i>
+            <p>Up to <strong>90%</strong> Funding</p>
+          </div>
+          <div class="rate-item">
+            <i class="fas fa-rupee-sign"></i>
+            <p>Up to <strong>₹5 Crore</strong></p>
+          </div>
+          <div class="rate-item">
+            <i class="fas fa-calendar-alt"></i>
+            <p>Up to <strong>30 Years</strong></p>
           </div>
         </div>
+        <div class="cta-group">
+          <button class="primary-cta">Apply Now</button>
+          <button class="secondary-cta">Calculate EMI</button>
+        </div>
       </div>
+    </div>
+
+    <!-- Slide 2 - Quick Approval -->
+    <div class="carousel-slide">
+      <div class="slide-background" style="background-image: url('assets/images/h2.png');"></div>
+      <div class="slide-content">
+        <div class="financial-badge">Fast Track</div>
+        <h2>Get Approved in <span>72 Hours</span></h2>
+        <ul class="approval-features">
+          <li><i class="fas fa-check-circle"></i> Digital Application</li>
+          <li><i class="fas fa-check-circle"></i> Minimal Documentation</li>
+          <li><i class="fas fa-check-circle"></i> Instant Status Updates</li>
+        </ul>
+        <button class="primary-cta">Start Application</button>
+      </div>
+    </div>
+
+    <!-- Slide 3 - Special Offer -->
+    <div class="carousel-slide">
+      <div class="slide-background" style="background-image: url('assets/images/h3.png');"></div>
+      <div class="slide-content">
+        <div class="financial-badge offer">Women's Special</div>
+        <h2>Extra <span>0.1% Discount</span> for Women</h2>
+        <div class="offer-highlights">
+          <p><i class="fas fa-star"></i> Effective Rate: <strong>8.3%</strong></p>
+          <p><i class="fas fa-star"></i> Higher Eligibility Limit</p>
+          <p><i class="fas fa-star"></i> Lower Processing Fees</p>
+        </div>
+        <button class="primary-cta">Explore Benefits</button>
+      </div>
+    </div>
+
+    <!-- Carousel Controls -->
+    <div class="carousel-controls">
+      <button class="control-prev"><i class="fas fa-chevron-left"></i></button>
+      <div class="indicators">
+        <span class="indicator active"></span>
+        <span class="indicator"></span>
+        <span class="indicator"></span>
+      </div>
+      <button class="control-next"><i class="fas fa-chevron-right"></i></button>
     </div>
   </div>
 </div>
