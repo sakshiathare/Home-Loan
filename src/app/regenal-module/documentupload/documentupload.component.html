@@ -1,55 +1,136 @@
-<!-- Doument Form Start -->
-<div class="jumbotron"style="text-align:center" >
-    <form [formGroup]="DocForm" (ngSubmit)="save()">
-        <div class="form-group">
-          <label for="exampleInputEmail1">Customer Id</label>
-          <input type="text" class="form-control col-md-4" formControlName="customerid">
-         
-        </div><br>
-        <div class="form-group">
-          <label for="exampleInputPassword1">pancard</label>
-          <input type="file" class="form-control  col-md-4" (change)="onSelectedFile1($event)">
-        </div><br>
-        <div class="form-group">
-            <label for="exampleInputEmail1">addressproof</label>
-            <input type="file" class="form-control col-md-4" (change)="onSelectedFile2($event)">
-           
-          </div><br>
-          <div class="form-group">
-            <label for="exampleInputPassword1">itr</label>
-            <input type="file" class="form-control  col-md-4" (change)="onSelectedFile3($event)">
-          </div><br>
-          <div class="form-group">
-            <label for="exampleInputPassword1"> adharcard</label>
-            <input type="file" class="form-control  col-md-4" (change)="onSelectedFile4($event)">
-          </div><br>
-          <div class="form-group">
-          <label for="exampleInputPassword1">photo</label>
-          <input type="file" class="form-control  col-md-4" (change)="onSelectedFile5($event)">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputEmail1">signature</label>
-            <input type="file" class="form-control col-md-4" (change)="onSelectedFile6($event)">
-           
-          </div><br>
-          <div class="form-group">
-            <label for="exampleInputPassword1">thumb</label>
-            <input type="file" class="form-control  col-md-4" (change)="onSelectedFile7($event)">
-          </div><br>
-          <div class="form-group">
-            <label for="exampleInputPassword1"> bankcheque</label>
-            <input type="file" class="form-control  col-md-4" (change)="onSelectedFile8($event)">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">property_details</label>
-            <input type="file" class="form-control  col-md-4" (change)="onSelectedFile9($event)">
-          </div><br>
-          <div class="form-group">
-            <label for="exampleInputPassword1">salaryslip</label>
-            <input type="file" class="form-control  col-md-4" (change)="onSelectedFile10($event)">
-          </div><br>
-        
-        <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+<div class="container mt-5">
+  <div class="card shadow-lg">
+    <div class="card-header bg-primary text-white">
+      <h3 class="mb-0">Document Upload Center</h3>
     </div>
     
+    <div class="card-body">
+      <form [formGroup]="DocForm" (ngSubmit)="save()">
+        <div class="row g-4">
+          <!-- Left Column -->
+          <div class="col-md-6">
+            <!-- Customer ID -->
+            <div class="mb-4">
+              <label class="form-label text-primary fw-bold">
+                <i class="fas fa-user-circle me-2"></i>Customer ID
+              </label>
+              <input type="text" class="form-control form-control-lg" 
+                     formControlName="customerid" placeholder="Enter Customer ID">
+            </div>
+
+            <!-- Common Documents -->
+            <div class="upload-section mb-4">
+              <label class="form-label text-primary fw-bold">
+                <i class="fas fa-file-contract me-2"></i>Identity Proof
+              </label>
+              <div class="d-flex flex-column gap-3">
+                <div class="file-upload-box" (click)="file1.click()">
+                  <input #file1 type="file" hidden (change)="onSelectedFile1($event)">
+                  <i class="fas fa-id-card fa-2x text-muted"></i>
+                  <div class="mt-2">PAN Card</div>
+                  <small class="text-muted">(Max 2MB, PDF/JPEG/PNG)</small>
+                </div>
+
+                <div class="file-upload-box" (click)="file2.click()">
+                  <input #file2 type="file" hidden (change)="onSelectedFile2($event)">
+                  <i class="fas fa-address-card fa-2x text-muted"></i>
+                  <div class="mt-2">Address Proof</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Financial Documents -->
+            <div class="upload-section mb-4">
+              <label class="form-label text-primary fw-bold">
+                <i class="fas fa-coins me-2"></i>Financial Documents
+              </label>
+              <div class="d-flex flex-column gap-3">
+                <div class="file-upload-box" (click)="file3.click()">
+                  <input #file3 type="file" hidden (change)="onSelectedFile3($event)">
+                  <i class="fas fa-file-invoice-dollar fa-2x text-muted"></i>
+                  <div class="mt-2">ITR Documents</div>
+                </div>
+
+                <div class="file-upload-box" (click)="file10.click()">
+                  <input #file10 type="file" hidden (change)="onSelectedFile10($event)">
+                  <i class="fas fa-receipt fa-2x text-muted"></i>
+                  <div class="mt-2">Salary Slips</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="col-md-6">
+            <!-- Personal Documents -->
+            <div class="upload-section mb-4">
+              <label class="form-label text-primary fw-bold">
+                <i class="fas fa-user-check me-2"></i>Personal Documents
+              </label>
+              <div class="d-flex flex-column gap-3">
+                <div class="file-upload-box" (click)="file4.click()">
+                  <input #file4 type="file" hidden (change)="onSelectedFile4($event)">
+                  <i class="fas fa-address-book fa-2x text-muted"></i>
+                  <div class="mt-2">Aadhar Card</div>
+                </div>
+
+                <div class="file-upload-box" (click)="file5.click()">
+                  <input #file5 type="file" hidden (change)="onSelectedFile5($event)">
+                  <i class="fas fa-camera fa-2x text-muted"></i>
+                  <div class="mt-2">Photograph</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Banking Documents -->
+            <div class="upload-section mb-4">
+              <label class="form-label text-primary fw-bold">
+                <i class="fas fa-university me-2"></i>Banking Documents
+              </label>
+              <div class="d-flex flex-column gap-3">
+                <div class="file-upload-box" (click)="file8.click()">
+                  <input #file8 type="file" hidden (change)="onSelectedFile8($event)">
+                  <i class="fas fa-money-check-alt fa-2x text-muted"></i>
+                  <div class="mt-2">Bank Cheque</div>
+                </div>
+
+                <div class="file-upload-box" (click)="file9.click()">
+                  <input #file9 type="file" hidden (change)="onSelectedFile9($event)">
+                  <i class="fas fa-home fa-2x text-muted"></i>
+                  <div class="mt-2">Property Details</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Biometric -->
+            <div class="upload-section">
+              <label class="form-label text-primary fw-bold">
+                <i class="fas fa-fingerprint me-2"></i>Biometric
+              </label>
+              <div class="d-flex flex-column gap-3">
+                <div class="file-upload-box" (click)="file6.click()">
+                  <input #file6 type="file" hidden (change)="onSelectedFile6($event)">
+                  <i class="fas fa-signature fa-2x text-muted"></i>
+                  <div class="mt-2">Signature</div>
+                </div>
+
+                <div class="file-upload-box" (click)="file7.click()">
+                  <input #file7 type="file" hidden (change)="onSelectedFile7($event)">
+                  <i class="fas fa-hand-paper fa-2x text-muted"></i>
+                  <div class="mt-2">Thumb Impression</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="d-grid gap-2 mt-5">
+          <button type="submit" class="btn btn-primary btn-lg">
+            <i class="fas fa-cloud-upload-alt me-2"></i>Upload All Documents
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

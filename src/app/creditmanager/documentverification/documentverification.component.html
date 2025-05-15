@@ -1,171 +1,312 @@
-
-    <section class="h-100 bg-dark">
-        <div class="container py-5 h-100">
-          <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col">
-              <div class="card card-registration my-4">
-                <div class="row g-0">
-                 <form [formGroup]="verificationForm">
-                  <div class="col-xl-12">
-                    <div class="card-body p-md-5 text-black">
-                      <h3 class="mb-5 text-uppercase">Document Varification</h3>
-      
-                      <div class="row ">
-                        <div class="col-md-3 mb-4 ">
-                          <div class="form-outline">
-                            <label class="form-label" for="form3Example1m">Document ID</label>
-                            <div *ngFor="let d of retrievedDoc">{{d.documentid}}</div>
-                          </div>
-                        </div>
-                        <div class="col-md-3 mb-4">
-                          <div class="form-outline">
-                            <label class="form-label" for="form3Example1n">Customer ID</label>
-                            <div *ngFor="let d of retrievedDoc">{{d.customerid}}</div>
-                          </div>
-                        </div>
-                   
-                            <div class="col-md-3 mb-4">
-                              <div class="form-outline">
-                                <label class="form-label" for="form3Example1m">Address Proof</label>
-                                <div *ngIf="retrievedDoc">
-                                    <div *ngFor="let d of retrievedDoc">
-                                        <img [src]="'data:image/jpeg;base64,'+d.addressproof">
-                                    </div>
-                                </div>
-                                <input type="radio" value="Verified" formControlName="addressProof" />Verified&nbsp;&nbsp;
-                                <input type="radio" value="Rejected" formControlName="addressProof" />Rejected
-                              </div>
-                            </div>
-                            <div class="col-md-3 mb-4">
-                              <div class="form-outline">
-                                <label class="form-label" for="form3Example1n">ITR</label>
-                                <td>
-                                    <div *ngIf="retrievedDoc">
-                                        <div *ngFor="let d of retrievedDoc">
-                                            <img [src]="'data:image/jpeg;base64,'+d.itr">
-                                        </div>
-                                    </div>
-                                </td>
-                                <input type="radio" value="Verified"  formControlName="itr" />Verified&nbsp;&nbsp;
-                                <input type="radio" value="Rejected"  formControlName="itr" />Rejected
-                              </div>
-                            </div>
+<section class="h-100 bg-light">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12">
+        <div class="card card-registration my-4 shadow">
+          <div class="row g-0">
+            <form [formGroup]="verificationForm">
+              <div class="col-xl-12">
+                <div class="card-body p-md-5">
+                  <h3 class="mb-4 text-center text-uppercase text-primary">Document Verification</h3>
+                  
+                  <!-- Document Info -->
+                  <div class="row mb-4 border-bottom pb-3">
+                    <div class="col-md-6 mb-3">
+                      <div class="form-group">
+                        <label class="form-label fw-bold">Document ID</label>
+                        <div class="form-control-plaintext">{{retrievedDoc?.[0]?.documentid || 'N/A'}}</div>
                       </div>
-                     <!-- second row -->
-                      <div class="row">
-                        <div class="col-md-3 mb-4">
-                          <div class="form-outline">
-                            <label class="form-label" for="form3Example1m1">Pancard</label>
-                            <div *ngIf="retrievedDoc">
-                                <div *ngFor="let d of retrievedDoc">
-                                    <img [src]="'data:image/jpeg;base64,'+d.pancard">
-                                </div>
-                            </div>
-                            <input type="radio" value="Verified"  formControlName="pancard" />Verified&nbsp;&nbsp;
-                            <input type="radio" value="Rejected"  formControlName="pancard" />Rejected
-                          </div>
-                        </div>
-                        <div class="col-md-3 mb-4">
-                          <div class="form-outline">
-                            <label class="form-label" for="form3Example1n1">Addharcard</label>
-                            <div *ngIf="retrievedDoc">
-                                <div *ngFor="let d of retrievedDoc">
-                                    <img [src]="'data:image/jpeg;base64,'+d.adharcard">
-                                </div>
-                            </div>
-                            <input type="radio" value="Verified" formControlName="adharcard" />Verified&nbsp;&nbsp;
-                            <input type="radio" value="Rejected" formControlName="adharcard" />Rejected
-                          </div>
-                        </div>
-                        <div class="col-md-3 mb-4">
-                            <div class="form-outline">
-                              <label class="form-label" for="form3Example1m1">Photo</label>
-                              <div *ngIf="retrievedDoc">
-                                <div *ngFor="let d of retrievedDoc">
-                                    <img [src]="'data:image/jpeg;base64,'+d.photo">
-                                </div>
-                            </div>
-                            <input type="radio" value="Verified" formControlName="photo" />Verified&nbsp;&nbsp;
-                            <input type="radio" value="Rejected" formControlName="photo" />Rejected
-                            </div>
-                          </div>
-                          <div class="col-md-3 mb-4">
-                            <div class="form-outline">
-                              <label class="form-label" for="form3Example1n1">Signature</label>
-                              <div *ngIf="retrievedDoc">
-                                <div *ngFor="let d of retrievedDoc">
-                                    <img [src]="'data:image/jpeg;base64,'+d.signature">
-                                </div>
-                            </div>
-                            <input type="radio" value="Verified" formControlName="signature" />Verified&nbsp;&nbsp;
-                            <input type="radio" value="Rejected" formControlName="signature" />Rejected
-                            </div>
-                          </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <div class="form-group">
+                        <label class="form-label fw-bold">Customer ID</label>
+                        <div class="form-control-plaintext">{{retrievedDoc?.[0]?.customerid || 'N/A'}}</div>
                       </div>
-                      <!-- Thier row -->
-                      <div class="row">
-                        <div class="col-md-3 mb-4">
-                          <div class="form-outline">
-                            <label class="form-label" for="form3Example1m1">Thumb</label>
-                            <div *ngIf="retrievedDoc">
-                                <div *ngFor="let d of retrievedDoc">
-                                    <img [src]="'data:image/jpeg;base64,'+d.thumb">
-                                </div>
-                            </div>
-                            <input type="radio" value="Verified" formControlName="thumb" />Verified&nbsp;&nbsp;
-                            <input type="radio" value="Rejected" formControlName="thumb" />Rejected
-                          </div>
-                        </div>
-                        <div class="col-md-3 mb-4">
-                          <div class="form-outline">
-                            <label class="form-label" for="form3Example1n1">Bank check</label>
-                            <div *ngIf="retrievedDoc">
-                                <div *ngFor="let d of retrievedDoc">
-                                    <img [src]="'data:image/jpeg;base64,'+d.bankcheque">
-                                </div>
-                            </div>
-                            <input type="radio" value="Verified" formControlName="bankcheck" />Verified&nbsp;&nbsp;
-                            <input type="radio" value="Rejected" formControlName="bankcheck" />Rejected
-                          </div>
-                        </div>
-                        <div class="col-md-3 mb-4">
-                            <div class="form-outline">
-                              <label class="form-label" for="form3Example1m1">Property Details</label>
-                              <div *ngIf="retrievedDoc">
-                                <div *ngFor="let d of retrievedDoc">
-                                    <img [src]="'data:image/jpeg;base64,'+d.property_details">
-                                </div>
-                                </div>
-                                <input type="radio" value="Verified" formControlName="propertydetails" />Verified&nbsp;&nbsp;
-                                <input type="radio" value="Rejected" formControlName="propertydetails" />Rejected
-                            </div>
-                          </div>
-                          <div class="col-md-3 mb-4">
-                            <div class="form-outline">
-                              <label class="form-label" for="form3Example1n1">Salaray Slip</label>
-                              <div *ngIf="retrievedDoc">
-                                <div *ngFor="let d of retrievedDoc">
-                                    <img [src]="'data:image/jpeg;base64,'+d.salaryslip">
-                                </div>
-                            </div>
-                            <input type="radio" value="Verified" formControlName="salaryslip" />Verified&nbsp;&nbsp;
-                            <input type="radio" value="Rejected" formControlName="salaryslip" />Rejected
-                            </div>
-                          </div>
-                      </div>
-                      <div *ngFor="let d of retrievedDoc">
-                          <input class="btn btn-info" type="button" [routerLink]="['sanctionletter',d.documentid]" [disabled]="!verificationForm.valid" value="Sanction letter">
-                            <button class="btn btn-dark float-right" (click)="back()">Back</button>
-                        </div>
-
                     </div>
                   </div>
-                </form>
+
+                  <!-- Document Images with Verification -->
+                  <div class="row">
+                    <!-- Column 1 -->
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100">
+                        <div class="card-body">
+                          <h5 class="card-title">Address Proof</h5>
+                          <div class="document-image-container mb-3">
+                            <img *ngIf="retrievedDoc?.[0]?.addressproof" 
+                                 [src]="'data:image/jpeg;base64,'+retrievedDoc[0].addressproof" 
+                                 class="img-fluid document-image" alt="Address Proof">
+                          </div>
+                          <div class="verification-options">
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" id="addressProofVerified" 
+                                     value="Verified" formControlName="addressProof">
+                              <label class="form-check-label text-success" for="addressProofVerified">Verified</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" id="addressProofRejected" 
+                                     value="Rejected" formControlName="addressProof">
+                              <label class="form-check-label text-danger" for="addressProofRejected">Rejected</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Column 2 -->
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100">
+                        <div class="card-body">
+                          <h5 class="card-title">ITR</h5>
+                          <div class="document-image-container mb-3">
+                            <img *ngIf="retrievedDoc?.[0]?.itr" 
+                                 [src]="'data:image/jpeg;base64,'+retrievedDoc[0].itr" 
+                                 class="img-fluid document-image" alt="ITR">
+                          </div>
+                          <div class="verification-options">
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" id="itrVerified" 
+                                     value="Verified" formControlName="itr">
+                              <label class="form-check-label text-success" for="itrVerified">Verified</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" id="itrRejected" 
+                                     value="Rejected" formControlName="itr">
+                              <label class="form-check-label text-danger" for="itrRejected">Rejected</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Column 3 -->
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100">
+                        <div class="card-body">
+                          <h5 class="card-title">Pancard</h5>
+                          <div class="document-image-container mb-3">
+                            <img *ngIf="retrievedDoc?.[0]?.pancard" 
+                                 [src]="'data:image/jpeg;base64,'+retrievedDoc[0].pancard" 
+                                 class="img-fluid document-image" alt="Pancard">
+                          </div>
+                          <div class="verification-options">
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" id="pancardVerified" 
+                                     value="Verified" formControlName="pancard">
+                              <label class="form-check-label text-success" for="pancardVerified">Verified</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" id="pancardRejected" 
+                                     value="Rejected" formControlName="pancard">
+                              <label class="form-check-label text-danger" for="pancardRejected">Rejected</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Column 4 -->
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100">
+                        <div class="card-body">
+                          <h5 class="card-title">Aadhaar Card</h5>
+                          <div class="document-image-container mb-3">
+                            <img *ngIf="retrievedDoc?.[0]?.adharcard" 
+                                 [src]="'data:image/jpeg;base64,'+retrievedDoc[0].adharcard" 
+                                 class="img-fluid document-image" alt="Aadhaar Card">
+                          </div>
+                          <div class="verification-options">
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" id="adharcardVerified" 
+                                     value="Verified" formControlName="adharcard">
+                              <label class="form-check-label text-success" for="adharcardVerified">Verified</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" id="adharcardRejected" 
+                                     value="Rejected" formControlName="adharcard">
+                              <label class="form-check-label text-danger" for="adharcardRejected">Rejected</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Column 5 -->
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100">
+                        <div class="card-body">
+                          <h5 class="card-title">Photo</h5>
+                          <div class="document-image-container mb-3">
+                            <img *ngIf="retrievedDoc?.[0]?.photo" 
+                                 [src]="'data:image/jpeg;base64,'+retrievedDoc[0].photo" 
+                                 class="img-fluid document-image rounded-circle" alt="Photo">
+                          </div>
+                          <div class="verification-options">
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" id="photoVerified" 
+                                     value="Verified" formControlName="photo">
+                              <label class="form-check-label text-success" for="photoVerified">Verified</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" id="photoRejected" 
+                                     value="Rejected" formControlName="photo">
+                              <label class="form-check-label text-danger" for="photoRejected">Rejected</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Column 6 -->
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100">
+                        <div class="card-body">
+                          <h5 class="card-title">Signature</h5>
+                          <div class="document-image-container mb-3">
+                            <img *ngIf="retrievedDoc?.[0]?.signature" 
+                                 [src]="'data:image/jpeg;base64,'+retrievedDoc[0].signature" 
+                                 class="img-fluid document-image" alt="Signature">
+                          </div>
+                          <div class="verification-options">
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" id="signatureVerified" 
+                                     value="Verified" formControlName="signature">
+                              <label class="form-check-label text-success" for="signatureVerified">Verified</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" id="signatureRejected" 
+                                     value="Rejected" formControlName="signature">
+                              <label class="form-check-label text-danger" for="signatureRejected">Rejected</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Column 7 -->
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100">
+                        <div class="card-body">
+                          <h5 class="card-title">Thumb Impression</h5>
+                          <div class="document-image-container mb-3">
+                            <img *ngIf="retrievedDoc?.[0]?.thumb" 
+                                 [src]="'data:image/jpeg;base64,'+retrievedDoc[0].thumb" 
+                                 class="img-fluid document-image" alt="Thumb Impression">
+                          </div>
+                          <div class="verification-options">
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" id="thumbVerified" 
+                                     value="Verified" formControlName="thumb">
+                              <label class="form-check-label text-success" for="thumbVerified">Verified</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" id="thumbRejected" 
+                                     value="Rejected" formControlName="thumb">
+                              <label class="form-check-label text-danger" for="thumbRejected">Rejected</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Column 8 -->
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100">
+                        <div class="card-body">
+                          <h5 class="card-title">Bank Cheque</h5>
+                          <div class="document-image-container mb-3">
+                            <img *ngIf="retrievedDoc?.[0]?.bankcheque" 
+                                 [src]="'data:image/jpeg;base64,'+retrievedDoc[0].bankcheque" 
+                                 class="img-fluid document-image" alt="Bank Cheque">
+                          </div>
+                          <div class="verification-options">
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" id="bankcheckVerified" 
+                                     value="Verified" formControlName="bankcheck">
+                              <label class="form-check-label text-success" for="bankcheckVerified">Verified</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" id="bankcheckRejected" 
+                                     value="Rejected" formControlName="bankcheck">
+                              <label class="form-check-label text-danger" for="bankcheckRejected">Rejected</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Column 9 -->
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100">
+                        <div class="card-body">
+                          <h5 class="card-title">Property Details</h5>
+                          <div class="document-image-container mb-3">
+                            <img *ngIf="retrievedDoc?.[0]?.property_details" 
+                                 [src]="'data:image/jpeg;base64,'+retrievedDoc[0].property_details" 
+                                 class="img-fluid document-image" alt="Property Details">
+                          </div>
+                          <div class="verification-options">
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" id="propertydetailsVerified" 
+                                     value="Verified" formControlName="propertydetails">
+                              <label class="form-check-label text-success" for="propertydetailsVerified">Verified</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" id="propertydetailsRejected" 
+                                     value="Rejected" formControlName="propertydetails">
+                              <label class="form-check-label text-danger" for="propertydetailsRejected">Rejected</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Column 10 -->
+                    <div class="col-md-4 mb-4">
+                      <div class="card h-100">
+                        <div class="card-body">
+                          <h5 class="card-title">Salary Slip</h5>
+                          <div class="document-image-container mb-3">
+                            <img *ngIf="retrievedDoc?.[0]?.salaryslip" 
+                                 [src]="'data:image/jpeg;base64,'+retrievedDoc[0].salaryslip" 
+                                 class="img-fluid document-image" alt="Salary Slip">
+                          </div>
+                          <div class="verification-options">
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" id="salaryslipVerified" 
+                                     value="Verified" formControlName="salaryslip">
+                              <label class="form-check-label text-success" for="salaryslipVerified">Verified</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" id="salaryslipRejected" 
+                                     value="Rejected" formControlName="salaryslip">
+                              <label class="form-check-label text-danger" for="salaryslipRejected">Rejected</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Action Buttons -->
+                  <div class="d-flex justify-content-between pt-3">
+                    <button type="button" class="btn btn-secondary btn-lg" (click)="back()">
+                      <i class="fas fa-arrow-left me-2"></i>Back
+                    </button>
+                    <button *ngIf="retrievedDoc?.[0]?.documentid" class="btn btn-primary btn-lg" 
+                            [routerLink]="['sanctionletter', retrievedDoc[0].documentid]" 
+                            [disabled]="!verificationForm.valid">
+                      <i class="fas fa-file-alt me-2"></i>Generate Sanction Letter
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
+            </form>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
 <router-outlet></router-outlet>

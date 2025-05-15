@@ -1,0 +1,35 @@
+.document-image-container {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid #dee2e6;
+}
+
+.document-image {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.card {
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.verification-options {
+  padding: 10px 0;
+  border-top: 1px solid #eee;
+  margin-top: 10px;
+}
+
+.btn-lg {
+  min-width: 180px;
+}
